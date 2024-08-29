@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+
+
+*{
+    margin: 0px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/public/img/img_carrossel/fachada.jpg);
+    background-repeat: inherit;
+    background-size:cover;
+}
+
+form{
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    height: 50%;
+    padding: 20px;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #762626;;
+}
+
+form span{
+    font-family: "Seaweed Script", cursive;
+}
+
+.sessao{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.btn{
+    width: 50%;
+    color: #762626;
+    font-weight: 500;
+}
+
+.btn:hover{
+    transition: all 100ms ease-in;
+    transform: scale(1.1);
+    color: #762626;
+}
+
+.sessao input{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.cadastrar{
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;
+}
+
+.cadastrar a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+a:hover{
+    transition: all 100ms ease-in;
+    transform: scale(1.05);
+}
