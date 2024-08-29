@@ -26,4 +26,4 @@ reserva.belongsTo(usuario, {
     foreignKey: 'IDUsuario'
 });
 
-module.exports = reserva;
+module.exports = reserva; 
