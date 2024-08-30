@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
@@ -15,21 +12,27 @@
 
     <title>Clube Bosch</title>
 </head>
-
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"crossorigin="anonymous"></script>
+
     <header>
         <nav class="navbar">
             <div class="titulo">
                 <a><h1><span>Clube</span> Bosch</h1></a>
             </div>
-            <div class="minhasReservas">
-                <a href=""><h5>Minhas reservas</h5></a>
+            <div class="funcoes">
+                <div class="minhasReservas">
+                    <a href=""><h5>Minhas reservas</h5></a>
+                </div>
+               <div class="user">
+                    <h5> Olá, fulano</h5>     
+               </div>
             </div>
-           <div class="user">
-                <h5> Olá, fulano</h5>     
-           </div>
         </nav>
     </header>
+
     <main>
         <div class="container-fluid">
             <div class="row mb-5">
@@ -37,7 +40,7 @@
                     <div class="card">
                         <img class="card-img-top" src="../../public/img/img_carrossel/salao.jpg" alt="Imagem quadra de futsal">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                            <button name="churrasqueira" type="button" class="btn btn-danger w-75 h-50"><h4>Churrasqueiras</h4></button>
+                            <button name="churrasqueira" type="button" class="btn btn-danger btn-lg"><h4>Churrasqueiras</h4></button>
                         </div>
                     </div>
                 </div>  
@@ -45,7 +48,7 @@
                     <div class="card">
                         <img class="card-img-top" src="../../public/img/img_carrossel/churrasqueiras.jpg" alt="Imagem churrasqueiras">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                                <button name="churrasqueira" type="button" class="btn btn-danger w-75 h-50"><h4>Quadras</h4></button>
+                                <button name="churrasqueira" type="button" class="btn btn-danger btn-lg"><h4>Quadras</h4></button>
                             </div>
                         </div>
                     </div>
@@ -53,26 +56,7 @@
             </div>
         </div>
     </main>
-    <footer class="fixed-bottom">
-        <div class="telefone">
-            <h5>Telefone:(41) 99999-9999</h5>
-        </div>
-        <div class="endereco">
-            <h5>Endereco: v. Juscelino Kubitschek De Oliveira - Ld, 11800</h5>
-        </div>
-    </footer>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
