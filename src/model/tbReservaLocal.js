@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
-const local = require('../model/tb_local');
-const usuario = require('../model/tb_usuario');
+const local = require('./tbLocal');
+const usuario = require('./tbUsuario');
 
-const reserva = database.define('ReservaLocal',
+const reservaLocal = database.define('ReservaLocal',
     {
         IDReservaLocal: {
             type: Sequelize.INTEGER,
@@ -14,16 +14,20 @@ const reserva = database.define('ReservaLocal',
         Data: {
             type:Sequelize.DATEONLY,
             allowNull: false
+        },
+        Ativo: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false
         }
     }
 );
-reserva.belongsTo(local, {
-    constraint: true,
-    foreignKey: 'IDLocal'
-});
-reserva.belongsTo(usuario, {
+reservaLocal.belongsTo(usuario, {
     constraint: true,
     foreignKey: 'IDUsuario'
 });
+reservaLocal.belongsTo(local, {
+    constraint: true,
+    foreignKey: 'IDLocal'
+});
 
-module.exports = reserva; 
+module.exports = reservaLocal; 
