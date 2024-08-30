@@ -26,7 +26,7 @@ form{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color:white;
+    background-color:aliceblue;
 }
 
 form span{
@@ -35,8 +35,7 @@ form span{
 
 .sessao{
     display: flex;
-    gap: 20px;
-    align-items: center;
+    padding: 10px;
     width: 100%;
 }
 
@@ -54,7 +53,7 @@ form span{
 .sessao input{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin: 10px;
-
+    border: #76262663 solid 0.5px;
 }
 
 input[type=number]::-webkit-inner-spin-button { 

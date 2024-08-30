@@ -1,13 +1,17 @@
 const Sequelize = require('sequelize');
 const database = require('../config/db');
 
-const local = database.define('Local',
+const logLocal = database.define('LogLocal',
     {
-        IDLocal: {
+        IDLogLocal: {
             type: Sequelize.INTEGER,
             autoIncrement: true,
             allowNull: false,
             primaryKey: true
+        },
+        IDLocal: {
+            type: Sequelize.INTEGER,
+            allowNull: false
         },
         Nome: {
             type: Sequelize.STRING(50),
@@ -16,7 +20,16 @@ const local = database.define('Local',
         Capacidade: {
             type: Sequelize.INTEGER,
             allowNull: false
+        },
+        Ativo: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false
+        },
+        Acao: {
+            type: Sequelize.STRING(50),
+            allowNull: false
         }
     }
 );
-module.exports = local;
+
+module.exports = logLocal;

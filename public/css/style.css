@@ -1,4 +1,16 @@
+*{
+  margin: 0px;
+}
+main{
+  padding: 10px;
+}
 
+.modal-dialog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 .seaweed-script-regular {
     font-family: "Seaweed Script", cursive;
     font-weight: 580;
@@ -7,36 +19,44 @@
     font-size: 40px;
 }
 
-.navbar{
-    background-color: #a12f2f;
-}
-.bosch{
-    color: aliceblue;
-    font-weight: 700;
-    font-size: 35px;
+.form-control{
+    border-radius: 15px;
 }
 
+  .card{
+    width: 20rem;
+    border-radius: 15px;
+  }
+
+  .card-img-top{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
 button text{
     font-size:large;
 }
 
-/* body{
-    background-image: url(../img/churrasco.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-} */
-
-footer{
-    background-color: #762626;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
+.card button{
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
+.card h5{
+  margin: 0px;
+}
+
+
+h4{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+
 .icon {
-    width: 20px; /* Ajuste o tamanho conforme necessário */
-    height: 20px; /* Ajuste o tamanho conforme necessário */
+    width: 20px; 
+    height: 20px; 
   }
   
   .icon-button {
@@ -44,3 +64,19 @@ footer{
     border: none; 
     background: none; 
   }
+
+  .btn{
+    background-color:#762626;
+    border-color: #762626;
+    border-radius: 15px;
+}
+
+.btn-cadastro{
+  background-color:#34a359;
+  border-color: #34a359;
+  border-radius: 15px;
+}
+
+#churrasqueira{
+  width: 100%;
+}

@@ -24,6 +24,10 @@ const usuario = database.define('Usuario',
         Senha:{
             type: Sequelize.STRING(50),
             allowNull: false
+        },
+        Ativo: {
+            type: Sequelize.BOOLEAN,
+            allowNull: false
         }
     }
 );

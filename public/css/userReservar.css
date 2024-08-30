@@ -1,0 +1,59 @@
+
+
+.minhasReservas a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.minhasReservas h5:hover{
+    transition: all 100ms ease-in;
+    transform: scale(1.05);
+    border-bottom: solid 1px white;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    background-repeat: inherit;
+    background-size:cover;
+    align-items: center;
+}
+
+form{
+    color: #762626;;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 15px;
+    min-height: 60%;
+    padding: 20px;
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:aliceblue;
+    justify-content: space-around;
+}
+
+.sessao{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.sessao input,select{
+    border: #7626267a solid 1px;
+}
+
+#local, #data{
+    font-size: medium;
+}
+#btnReservar{
+    width: 100%;
+    margin: 10px;
+}
