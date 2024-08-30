@@ -3,6 +3,12 @@
     background-color: #a12f2f;
 }
 
+.modal-dialog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 .seaweed-script-regular {
     font-family: "Seaweed Script", cursive;
     font-weight: 580;
@@ -15,20 +21,22 @@
     font-family: "Poppins", sans-serif;
     color: aliceblue;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 25px;
     font-style: normal;
   }
+
 
   .poppins-regular-number{
     font-family: "Poppins", sans-serif;
     color: aliceblue;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 23px;
     font-style: normal;
   }
 
   .poppins-regular-form{
     font-family: "Poppins", sans-serif;
+    font-weight: 600;
   }
 
 .form-control{
@@ -81,4 +89,10 @@ footer{
     background-color:#762626;
     border-color: #762626;
     border-radius: 15px;
+}
+
+.btn-cadastro{
+  background-color:#34a359;
+  border-color: #34a359;
+  border-radius: 15px;
 }
