@@ -1,4 +1,8 @@
 
+.navbar{
+    background-color: #a12f2f;
+}
+
 .seaweed-script-regular {
     font-family: "Seaweed Script", cursive;
     font-weight: 580;
@@ -7,22 +11,56 @@
     font-size: 40px;
 }
 
-.navbar{
-    background-color: #a12f2f;
-}
-.bosch{
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
     color: aliceblue;
     font-weight: 700;
     font-size: 35px;
+    font-style: normal;
+  }
+
+  .poppins-regular-number{
+    font-family: "Poppins", sans-serif;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 30px;
+    font-style: normal;
+  }
+
+  .poppins-regular-form{
+    font-family: "Poppins", sans-serif;
+  }
+
+.form-control{
+    border-radius: 15px;
 }
 
+  .card{
+    width: 20rem;
+    border-radius: 15px;
+  }
+
+  .card-img-top{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
 button text{
     font-size:large;
 }
 
+h4{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+h5{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
 footer{
     background-color: #762626;
-    color: white;
+    color: aliceblue;
     padding: 20px;
     display: flex;
     justify-content: space-around;
@@ -38,3 +76,9 @@ footer{
     border: none; 
     background: none; 
   }
+
+  .btn{
+    background-color:#762626;
+    border-color: #762626;
+    border-radius: 15px;
+}
