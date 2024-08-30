@@ -11,11 +11,6 @@ const logCancelarReservaLocal = database.define('logCancelarReservaLocal',
             primaryKey: true
         },
 
-        Motivo: {
-            type: Sequelize.STRING(150),
-            allowNull: false
-        },
-
         DataCancelamento: {
             type: Date.now(),
             allowNull: true
