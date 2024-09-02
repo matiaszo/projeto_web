@@ -17,6 +17,14 @@ const logUsuario = database.define('LogUsuario',
             type: Sequelize.STRING(100),
             allowNull: false
         },
+        Sobrenome: {
+            type: Sequelize.STRING(100),
+            allowNull: false
+        },
+        Email: {
+            type: Sequelize.STRING(100),
+            allowNull: false
+        },
         EDV: {
             type: Sequelize.INTEGER,
             allowNull: false
@@ -26,7 +34,7 @@ const logUsuario = database.define('LogUsuario',
             allowNull: false
         },
         Senha:{
-            type: Sequelize.STRING(50),
+            type: Sequelize.STRING(100),
             allowNull: false
         },
         Ativo: {
@@ -34,7 +42,7 @@ const logUsuario = database.define('LogUsuario',
             allowNull: false
         },
         Acao: {
-            type: Sequelize.STRING(50)
+            type: Sequelize.STRING(100)
         }
     }
 );

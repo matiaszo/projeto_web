@@ -1,6 +1,6 @@
 
 module.exports = {
-    async homeGet(req, res){
+    async getHome(req, res){
         res.render('../views/index')
     }
 }

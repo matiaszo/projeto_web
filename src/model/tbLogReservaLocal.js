@@ -30,7 +30,7 @@ const logReservaLocal = database.define('LogReservaLocal',
             allowNull: false
         },
         Acao: {
-            type: Sequelize.STRING(50)
+            type: Sequelize.STRING(100)
         }
 
     }
