@@ -3,30 +3,35 @@ const route = express.Router();
 
 const home = require('./src/controllers/home');
 const logIn = require('./src/controllers/log');
-const cadastro_usuario = require('./src/controllers/userCad');
-const user_main = require('./src/controllers/userMain');
-const user_ver_reservas = require('./src/controllers/userVisualizarReservas')
-const user_reservar = require('./src/controllers/userReservar')
+const cadastroUsuario = require('./src/controllers/userCad');
+const userMain = require('./src/controllers/userMain');
+const userVerReservas = require('./src/controllers/userVisualizarReservas')
+const userReservar = require('./src/controllers/userReservar')
 
+const admMain = require('./src/controllers/admMain')
+const admChurrasqueira = require('./src/controllers/admChurrasqueira')
+const admReserva = require('./src/controllers/admReserva')
 
 route.get('/', home.getHome);
-// route.post('/home', logIn.postUserCad);
-
 
 route.get('/logIn', logIn.getLogIn);
 route.post('/login', logIn.postLogIn);
 
-// console.log(456);
+route.get('/userCadastro', cadastroUsuario.getUserCadastro);
 
-route.get('/userCadastro', cadastro_usuario.getUserCadastro);
-// route.post('/userCadastro', cadastro_usuario.postUserCadastro)
+route.get('/userPagPrincipal/:id', userMain.getUserMain);
 
-route.get('/userPagPrincipal/:id', user_main.getUserMain);
+route.get('/userVisualizarReservas/:id', userVerReservas.getUserVizualizarReservas);
 
-route.get('/userVisualizarReservas/:id', user_ver_reservas.getUserVizualizarReservas)
+route.get('/userReservar/:id', userReservar.getUserReservar);
+route.post('/userReservar/:id', userReservar.postUserReservar);
 
+route.get('/admPagPrincipal/:id', admMain.getAdmMain);
+route.post('/admPagPrincipal/:id', admMain.postAdmMain);
 
-route.get('/userReservar/:id', user_reservar.getUserReservar)
-route.post('/userReservar/:id', user_reservar.postUserReservar)
+route.get('/admChurrasqueiras/:id', admChurrasqueira.getAdmChurrasqueiras);
+route.post('/admChurrasqueiras/:id', admChurrasqueira.postAdmChurrasqueira);
+
+route.get('/admReservas/:id', admReserva.getAdmReserva)
 
 module.exports = route;

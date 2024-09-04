@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/navFooter.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/navFooter.css">
 
     <title>Administração</title>
 </head>
@@ -21,10 +21,10 @@
             </div>
             <div class="funcoes">
                 <div class="minhasReservas">
-                    <a href=""><h5>Reservas</h5></a>
+                    <a href="/admReservas/<%=user[0].IDUsuario %>"><h5>Reservas</h5></a>
                 </div>
                <div class="user d-flex gap-2">
-                    <h5>Administrador:</h5><h5> 1234 </h5>    
+                    <h5>Administrador: <%=user[0].Nome %>, </h5><h5> Edv: <%=user[0].EDV%> </h5>    
                </div>
             </div>
         </nav>
@@ -34,15 +34,15 @@
             <div class="row mb-5 gap-0">
                 <div class="col-md-6 mb-5 d-flex justify-content-center">
                     <div class="card">
-                        <img class="card-img-top" src="../../public/img/ronaldo.jpg" alt="Imagem de capa do card">
+                        <img class="card-img-top" src="/img/ronaldo.jpg" alt="Imagem de capa do card">
                         <div class="card-body d-flex justify-content-center">
-                            <button name="churrasqueira" type="button" class="btn btn-danger"><h5>Churrasqueiras</h5></button>
+                            <a href="/admChurrasqueiras/<%=user[0].IDUsuario%>" name="churrasqueira" class="btn btn-danger"><h5>Churrasqueiras</h5></a>
                         </div>
                     </div>
                 </div>  
                 <div class="col-md-6 mb-5 d-flex justify-content-center">
                     <div class="card">
-                        <img class="card-img-top" src="../../public/img/ronaldo.jpg" alt="Imagem de capa do card">
+                        <img class="card-img-top" src="/img/ronaldo.jpg" alt="Imagem de capa do card">
                         <div class="card-body d-flex justify-content-center ">
                             <button name="churrasqueira" type="button" class="btn btn-danger "><h5>Quadras</h5></button>
                         </div>
@@ -51,9 +51,9 @@
                 <div class="row mt-5">
                     <div class="column md-12 d-flex justify-content-center">
                         <div class="card">
-                            <img class="card-img-top" src="../../public/img/ronaldo.jpg" alt="Imagem de capa do card">
+                            <img class="card-img-top" src="/img/ronaldo.jpg" alt="Imagem de capa do card">
                             <div class="card-body d-flex justify-content-center">
-                                <button name="churrasqueira" type="button" class="btn btn-danger"><h5>Reservas</h5></button>
+                                <a href="/admReservas/<%=user[0].IDUsuario%>" name="reserva" type="button" class="btn btn-danger"><h5>Reservas</h5></a>
                             </div>
                         </div>
                     </div>

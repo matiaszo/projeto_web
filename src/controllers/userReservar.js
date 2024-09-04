@@ -2,6 +2,7 @@ const usuario = require('../model/tbUsuario')
 const locais = require('../model/tbLocal')
 const reservas = require('../model/tbReservaLocal')
 const logReservas = require('../model/tbLogReservaLocal')
+const { raw } = require('express')
 
 module.exports = {
     async getUserReservar(req, res){
@@ -28,12 +29,20 @@ module.exports = {
 
     async postUserReservar(req, res){
         data = req.body
+        userId = req.params.id
 
+        const local = await locais.findAll({
+            raw: true,
+            attributes: ['IDLocal']
+
+            }
+        )
         await reservas.create({
-            Data: body.data,
+            Data: data.data,
             Ativo: true,
-            IDUsuario: 
+            IDUsuario: userId,
+            IDLocal: local[0].IDLocal
         })
-
+        res.render('../views/userPagPrincipal');
     }
 }

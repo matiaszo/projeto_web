@@ -2,16 +2,16 @@ const usuario = require("../model/tbUsuario")
 
 
 module.exports = {
-    async getUserMain(req, res){
+    async getAdmMain(req, res){
         data = req.params.id;
         const user = await usuario.findAll({
             raw: true,
             attributes: ['EDV', 'Senha', 'Nome', 'IDUsuario'],
             where: {IDUsuario: data}
         })
-        res.render('../views/userPagPrincipal', {user})
+        res.render('../views/admPagPrincipal', {user})
         },
-        async postUserMain(req, res){
-            console.log("yeaah budy");
+        async postAdmMain(req, res){
+            console.log("yeaah sir");
         }
     }
