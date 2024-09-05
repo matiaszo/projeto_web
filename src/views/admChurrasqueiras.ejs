@@ -32,6 +32,27 @@
 </header>
 
   <main>
+
+    <!-- <div class="modal fade" id="confirmar">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirmar exclusão</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Tem certeza que deseja excluir a reserva? </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <form action="/excluirReserva/#botaoExcluir" method="post">
+              <button type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog ">
       <div class="modal-content">
@@ -79,9 +100,7 @@
           </tr>
         </thead>
         <% for(let i = 0; i < churrasqueira.length; i++) { %>
-
         <tbody>
-         
           <tr class="poppins-regular-form">
               <th scope="row"><%=churrasqueira[i].IDLocal %></th>
               <td><%=churrasqueira[i].Nome %></td>
@@ -90,9 +109,11 @@
                 <button class="icon-button">
                   <img src="/img/iconEdit.png" alt="Edit Icon" class="icon">
                 </button>
-                <button class="icon-button">
+                <form action="/excluirChurrasqueira/<%=churrasqueira[i].IDLocal%>/<%=user[0].IDUsuario%>" method="post">
+                <button type="submit" id="botaoExcluir" class="icon-button">
                   <img src="/img/iconDelete.png" alt="Delete Icon" class="icon">
                 </button>
+              </form>
               </td>
             </tr>
           </tbody>
