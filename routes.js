@@ -34,5 +34,6 @@ route.get('/admChurrasqueiras/:id', admChurrasqueira.getAdmChurrasqueiras);
 route.post('/admChurrasqueiras/:id', admChurrasqueira.postAdmChurrasqueira);
 
 route.get('/admReservas/:id', admReserva.getAdmReserva)
+route.post('/admReservas', admReserva.postAdmReserva)
 
 module.exports = route;
