@@ -24,7 +24,6 @@ main{
 }
 
   .card{
-    width: 20rem;
     border-radius: 15px;
   }
 
@@ -52,7 +51,6 @@ h4{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
 }
-
 
 .icon {
     width: 20px; 
@@ -83,4 +81,16 @@ h4{
 
 a{
   width: 98%;
+}
+
+.card ul {
+  gap: 10px;
+  display: flex;
+  padding: 15px;
+}
+
+.cards{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }

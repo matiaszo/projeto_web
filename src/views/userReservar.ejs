@@ -11,7 +11,7 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
+    
     <header>
         <nav class="navbar">
             <div class="titulo">
@@ -21,9 +21,9 @@
                 <div class="minhasReservas">
                     <a href=""><h5>Minhas reservas</h5></a>
                 </div>
-               <div class="user">
+                <div class="user">
                     <h5> Olá, <%=user[0].Nome%> </h5>     
-               </div>
+                </div>
             </div>
         </nav>
     </header>
@@ -33,27 +33,28 @@
             <h4><span>Reserva</span><strong> Churrasqueira </strong> </h4>
             <div class="sessao">
                 <label for="edv">Edv:</label>
-                <input type="number" class="form-control form-control-lg" name="edv" id="edv" aria-describedby="edv">
+                <input type="number" class="form-control form-control-lg" name="edv" id="edv" aria-describedby="edv" value="<%=user[0].EDV%>" disabled>
             </div>
             <div class="sessao">
                 <label for="local">Local:</label>
-                <select class="form-select form-select-lg" aria-label="Default select example" name="local" id="local" style="border: #76262679 solid 1px;">
+                <select class="form-select form-select-lg" aria-label="Default select example" name="local" id="localReserva" onchange="mudarCapacidade()" style="border: #76262679 solid 1px;" >
                     <% for (let i = 0; i < local.length; i++) { %>
-                    <option><%=local[i].Nome%> </option>
+                        <option value="<%=local[i].IDLocal%>/<%=local[i].Capacidade%>"> <%=local[i].Nome%> </option>
                     <% } %>
                 </select>
-            </div>
-            <div class="sessao">
-                <label for="capacidade">Capacidade:</label>
-                <input type="number" class="form-control form-control-lg" name="quantidade" id="quantidade" aria-describedby="text">
-            </div>
-            <div class="sessao">
-                <label for="data">Data:</label>
-                <input type="date" class="form-control form-control-lg" name="data" id="data">
-            </div>
-            <small>**Caso a data e o local forem de interesse de outros colaboradores, todos participarão de um sorteio</small>
-            <button type="submit" id="btnReservar" class="btn btn-lg btn-light" style="color: aliceblue; background-color: #762626;"><strong>Reservar</strong></button>
-        </form>
-    </main>
-</body>
+                </div>
+                <div class="sessao">
+                    <label for="capacidade">Capacidade:</label>
+                    <input type="number" class="form-control form-control-lg" name="quantidade" id="quantidade" aria-describedby="text" value="" disabled>
+                </div>
+                <div class="sessao">
+                    <label for="data">Data:</label>
+                    <input type="date" class="form-control form-control-lg" name="dia" id="dataReserva" >
+                </div>
+                <small>**Caso a data e o local forem de interesse de outros colaboradores, todos participarão de um sorteio</small>
+                <button type="submit" id="btnReservar" class="btn btn-lg btn-light" style="color: aliceblue; background-color: #762626;"><strong>Reservar</strong></button>
+            </form>
+        </main>
+        <script src="/js/script.js"></script>
+    </body>
 </html>
