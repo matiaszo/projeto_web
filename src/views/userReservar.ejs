@@ -39,13 +39,13 @@
                 <label for="local">Local:</label>
                 <select class="form-select form-select-lg" aria-label="Default select example" name="local" id="local" style="border: #76262679 solid 1px;">
                     <% for (let i = 0; i < local.length; i++) { %>
-                    <option><%local[i].Nome%> </option>
+                    <option><%=local[i].Nome%> </option>
                     <% } %>
                 </select>
             </div>
             <div class="sessao">
-                <label for="capacidade">Quantidade de pessoas:</label>
-                <input type="number" class="form-control form-control-lg" name="quantidade" id="quantidade" aria-describedby="email">
+                <label for="capacidade">Capacidade:</label>
+                <input type="number" class="form-control form-control-lg" name="quantidade" id="quantidade" aria-describedby="text">
             </div>
             <div class="sessao">
                 <label for="data">Data:</label>

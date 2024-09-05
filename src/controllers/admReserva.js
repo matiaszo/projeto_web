@@ -16,7 +16,7 @@ module.exports = ({
             }],
         })
         
-        console.log(reserva[0]['Local.Nome'])
+        console.log(reserva[0]['Local.Nome']);
         res.render('../views/admReservas', {reserva});
     }
 })
