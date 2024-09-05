@@ -18,6 +18,7 @@ route.get('/logIn', logIn.getLogIn);
 route.post('/login', logIn.postLogIn);
 
 route.get('/userCadastro', cadastroUsuario.getUserCadastro);
+route.post('/userCadastro', cadastroUsuario.postUserCadastro);
 
 route.get('/userPagPrincipal/:id', userMain.getUserMain);
 
