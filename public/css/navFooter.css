@@ -48,6 +48,8 @@ header{
     flex-direction: row;
     width: 100%;
     cursor: pointer;
+    text-decoration: none;
+    color: white;
 
 }
 
