@@ -33,10 +33,6 @@ const usuario = database.define('Usuario',
         Senha:{
             type: Sequelize.STRING(100),
             allowNull: false
-        },
-        Ativo: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
         }
     }
 );

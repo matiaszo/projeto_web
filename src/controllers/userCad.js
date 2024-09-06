@@ -20,8 +20,7 @@ module.exports = {
             Email: data.email,
             EDV: data.edv,
             Adm: false,
-            Senha: senha,
-            Ativo: true 
+            Senha: senha
         });
 
         const idUsuario = await usuario.findAll({
@@ -43,7 +42,6 @@ module.exports = {
             EDV: data.edv,
             Adm: false,
             Senha: senha,
-            Ativo: true,
             Acao: "Novo usuario criado"
         })
         res.redirect('../logIn');

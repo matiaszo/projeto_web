@@ -37,10 +37,6 @@ const logUsuario = database.define('LogUsuario',
             type: Sequelize.STRING(100),
             allowNull: false
         },
-        Ativo: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
-        },
         Acao: {
             type: Sequelize.STRING(100)
         }

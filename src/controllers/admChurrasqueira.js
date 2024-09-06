@@ -24,8 +24,7 @@ module.exports = ({
 
         await churrasqueiras.create({
             Nome: data.nomeChurrasqueira,
-            Capacidade: data.capacidadeChurrasqueira,
-            Ativo: true
+            Capacidade: data.capacidadeChurrasqueira
         })
 
         res.redirect('/admChurrasqueiras/'+id);
