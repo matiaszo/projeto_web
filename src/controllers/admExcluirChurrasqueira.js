@@ -39,7 +39,7 @@ module.exports = {
             IDLocal: idLocal,
             Nome: localExcluido[0].Nome,
             Capacidade: localExcluido[0].Capacidade,
-            Acao: "local EXCLUIDO"
+            Acao: "churrasqueira EXCLUIDA"
         })
         await locais.destroy({
             where: {IDLocal: idLocal}

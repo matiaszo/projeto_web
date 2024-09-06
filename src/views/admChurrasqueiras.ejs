@@ -18,7 +18,7 @@
   <header>
     <nav class="navbar">
         <div class="titulo">
-            <a><h1><span>Clube</span></h1> <strong><h1>Bosch</h1></strong>  </h1></a>
+            <a href="/admPagPrincipal/<%=user[0].IDUsuario%>"><h1><span>Clube</span></h1> <strong><h1>Bosch</h1></strong></h1></a>
         </div>
         <div class="funcoes">
           <div class="minhasReservas">
@@ -33,7 +33,7 @@
 
   <main>
 
-    <!-- <div class="modal fade" id="confirmar">
+    <div class="modal fade" id="deletar">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -45,13 +45,13 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <form action="/excluirReserva/#botaoExcluir" method="post">
+            <form action="" method="post" id="excluirChurrasqueira">
               <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
         <div class="modal fade" id="editar">
       <div class="modal-dialog modal-dialog-centered">
@@ -75,7 +75,6 @@
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
               <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
-
           </div>
         </div>
       </div>
@@ -136,11 +135,9 @@
                 <button class="icon-button" data-bs-toggle="modal" data-bs-target="#editar" onclick="editarChurrasqueira('<%=churrasqueira[i].IDLocal%>', '<%=user[0].IDUsuario%>')">
                   <img src="/img/iconEdit.png" alt="Edit Icon" class="icon">
                 </button>
-                <form action="/excluirChurrasqueira/<%=churrasqueira[i].IDLocal%>/<%=user[0].IDUsuario%>" method="post">
-                <button type="submit" id="botaoExcluir" class="icon-button">
+                <button class="icon-button" data-bs-toggle="modal" data-bs-target="#deletar" onclick="excluirChurrasqueira('<%=churrasqueira[i].IDLocal%>', '<%=user[0].IDUsuario%>')">
                   <img src="/img/iconDelete.png" alt="Delete Icon" class="icon">
                 </button>
-              </form>
               </td>
             </tr>
           </tbody>

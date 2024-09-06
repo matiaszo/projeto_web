@@ -5,6 +5,7 @@ const usuarios = require('../model/tbUsuario');
 
 module.exports = {
     async getAdmReserva(req, res){
+        const idUser = req.params.id
         const local = await locais.findAll({
             raw: true,
             attributes: ['IDLocal', 'Nome', 'Capacidade']
@@ -22,18 +23,25 @@ module.exports = {
             }],
         })
         
-        console.log(reserva);
-        res.render('../views/admReservas', {reserva, local, id: ''});
+        const user = await usuarios.findAll({
+            raw: true,
+            attributes: ['EDV', 'Senha', 'Nome', 'IDUsuario'],
+            where: {IDUsuario: idUser}
+        })
+
+        res.render('../views/admReservas', {reserva, local, id: '', user});
     },
     async postAdmReserva(req, res){
-        id = req.body.local
+        const idUser = req.params.id
+        const idLocal = req.body.local;
+
         const local = await locais.findAll({
             raw: true,
             attributes: ['IDLocal', 'Nome', 'Capacidade']
         })
         const reserva = await reservas.findAll({
             raw:true,
-            where: {IDLocal: id},
+            where: {IDLocal: idLocal},
             include: [{
                 model: locais,
                 attributes: ['Nome', 'IDLocal'],
@@ -43,8 +51,13 @@ module.exports = {
                 attributes: ['Nome', 'EDV']
             }],
         })
+        const user = await usuarios.findAll({
+            raw: true,
+            attributes: ['EDV', 'Senha', 'Nome', 'IDUsuario'],
+            where: {IDUsuario: idUser}
+        })
         
-       res.render('../views/admReservas', {reserva, local, id}); 
+       res.render('../views/admReservas', {reserva, local, id: idLocal, user}); 
     }
 } 
 

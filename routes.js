@@ -38,12 +38,12 @@ route.post('/admPagPrincipal/:id', admMain.postAdmMain);
 route.get('/admChurrasqueiras/:id', admChurrasqueira.getAdmChurrasqueiras);
 route.post('/admChurrasqueiras/:id', admChurrasqueira.postAdmChurrasqueira);
 
-route.get('/admReservas/:id', admReserva.getAdmReserva)
-route.post('/admReservas', admReserva.postAdmReserva)
+route.get('/admReservas/:id', admReserva.getAdmReserva);
+route.post('/admReservas/:id', admReserva.postAdmReserva);
 
-route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.postAdmExcluirChurrasqueira)
+route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.postAdmExcluirChurrasqueira);
 
-route.post('/editarChurrasqueira/:idlocal/:iduser', admEditarChurrasqueira.postAdmEditarChurrasqueira)
+route.post('/editarChurrasqueira/:idlocal/:iduser', admEditarChurrasqueira.postAdmEditarChurrasqueira);
 route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.postAdmExcluirChurrasqueira);
 
 route.post('/excluirReservaLocal/:idreserva', userCancelarReserva.postUserExcluirReserva );
