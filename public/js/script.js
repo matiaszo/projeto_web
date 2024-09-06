@@ -1,6 +1,25 @@
 
-// const dataReserva = document.getElementById('dataReserva');
-// dataReserva.min = Date.now();
+
+function pad(valor) { // completa com zeros à esquerda, caso necessário
+    return valor.toString().padStart(2, '0');
+}
+
+function formata(data) {
+    return `${data.getFullYear()}-${pad(data.getMonth() + 1)}-${pad(data.getDate())}`;
+}
+
+const campo = document.getElementById('dataReserva');
+
+window.addEventListener('DOMContentLoaded', function() {
+    var data = new Date(); // data de hoje
+    campo.min = formata(data);
+    // 2 anos à frente
+    data.setMonth(data.getMonth() + 2);
+    campo.max = formata(data);
+});
+
+
+
 
 function mudarCapacidade(){
     let local = document.getElementById('localReserva').value;
