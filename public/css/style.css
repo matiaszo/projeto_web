@@ -63,11 +63,11 @@ h4{
     background: none; 
   }
 
-  .btn{
+  .cancelar{
     background-color:#762626;
     border-color: #762626;
     border-radius: 15px;
-}
+  } 
 
 .btn-cadastro{
   background-color:#34a359;
@@ -93,4 +93,26 @@ a{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.modalCancelaReserva ul{
+  gap: 15px;
+}
+
+.modalCancelaReserva{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modalCancelaReserva .acoes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sair{
+  background-color: #959e98;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
 }

@@ -27,6 +27,35 @@
         </nav>
     </header>
 
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Cancelar reserva:</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body modalCancelaReserva">
+                <ul class="list-group list-group-flush p-10 gap-10">
+                    <li class="list-group" id="LocalModal">Local: </li>
+                    <li class="list-group" id="CapModal">Capacidade: </li>
+                    <li class="list-group" id="DataModal">Data: </li>
+                    <li class="list-group" id="HoraModal">Horario: </li>
+                </ul>   
+                <div class="acoes">
+                    <form id="cancelaReserva" action="/excluirReservaLocal/" method="post">
+                        <button type="submit" class="btn btn-danger btn-sm cancelar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <h6>Cancelar Reserva</h6>
+                        </button>     
+                    </form>
+                    <button type="button" class=" btn btn-sm sair" data-bs-toggle="modal" >
+                        <h6>Sair</h6>
+                    </button>     
+                </div>                       
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <main>
         <div class="container d-flex justify-content-center mb-5">
             <h1 style="color: #762626;">Minhas Reservas</h1>
@@ -37,13 +66,13 @@
                     <div class="card col-md-3">
                         <img class="card-img-top" src="/img/img_carrossel/aberta.jpg" alt="Imagem de capa do card">
                         <ul class="list-group list-group-flush p-10">
-                            <li class="list-group">Local: <%=reserva[i]['Local.Nome']%> </li>
-                            <li class="list-group">Capacidade: <%=reserva[i]['Local.Capacidade']%></li>
-                            <li class="list-group">Data: <%=reserva[i].Data%></li>
-                            <li class="list-group">Horario: </li>
+                            <li class="list-group" id="Local<%=reserva[i].IDReservaLocal%>" > Local: <%=reserva[i]['Local.Nome']%> </li>
+                            <li class="list-group" id="Capacidade<%=reserva[i].IDReservaLocal%>" >Capacidade: <%=reserva[i]['Local.Capacidade']%></li>
+                            <li class="list-group" id="Data<%=reserva[i].IDReservaLocal%>"> Data: <%=reserva[i].Data%></li>
+                            <li class="list-group" id="Hora<%=reserva[i].IDReservaLocal%>"> Horario: </li>
                         </ul>
-                        <div class="card-footer d-flex justify-content-center">
-                            <button name="churrasqueira" type="button" class="btn btn-danger btn-sm">
+                        <div class="card-footer d-flex justify-content-center">      
+                            <button id="churrasqueira" type="submit" class="btn btn-danger btn-sm cancelar" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="cancelaReserva('<%=reserva[i].IDReservaLocal%>')"">
                                 <h5>Cancelar Reserva</h5>
                             </button>
                         </div>
@@ -52,6 +81,7 @@
             </div>
         
         </div>
+        <script src="/js/script.js"></script>
 </body>
 
 </html>

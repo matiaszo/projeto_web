@@ -25,10 +25,6 @@ const logReservaLocal = database.define('LogReservaLocal',
             type: Sequelize.DATE,
             allowNull: false
         },
-        Ativo: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
-        },
         Acao: {
             type: Sequelize.STRING(100)
         }

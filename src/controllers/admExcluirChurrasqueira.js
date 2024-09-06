@@ -1,7 +1,7 @@
 const { where } = require('sequelize');
 
-locais = require('../model/tbLocal');
-logLocais = require('../model/tbLogLocal');
+const locais = require('../model/tbLocal');
+const logLocais = require('../model/tbLogLocal');
 module.exports = {
     async postAdmExcluirChurrasqueira(req ,res){
 
