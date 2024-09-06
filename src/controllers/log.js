@@ -14,7 +14,7 @@ module.exports = {
         })
         if (!usuario[0]){            
             res.render('../views/logIn')
-            return
+            return;
         }
 
             if (usuario[0].EDV == data.edv && usuario[0].Senha == data.senha){
