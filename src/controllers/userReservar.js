@@ -3,6 +3,7 @@ const locais = require('../model/tbLocal')
 const reservas = require('../model/tbReservaLocal')
 const logReservas = require('../model/tbLogReservaLocal')
 const { raw } = require('express')
+const { where } = require('sequelize')
 
 module.exports = {
     async getUserReservar(req, res){
@@ -22,8 +23,10 @@ module.exports = {
 
         const local = await locais.findAll({
             raw: true,
-            attributes: ['IDLocal', 'Nome', 'Capacidade']
+            attributes: ['IDLocal', 'Nome', 'Capacidade'],
         })
+
+        console.log(user)
         res.render('../views/userReservar', {reserva, user, local});
     },
 
@@ -34,15 +37,21 @@ module.exports = {
         const local = await locais.findAll({
             raw: true,
             attributes: ['IDLocal']
+        })
 
-            }
-        )
-        await reservas.create({
-            Data: data.data,
+        const reserva = await reservas.create({
+            Data: data.dia,
             Ativo: true,
             IDUsuario: userId,
-            IDLocal: local[0].IDLocal
+            IDLocal: req.body.local[0]
         })
-        res.render('../views/userPagPrincipal');
+
+        const user = await usuario.findAll({
+            raw: true,
+            attributes: ['EDV', 'Senha', 'Nome', 'IDUsuario'],
+            where: {IDUsuario: userId}
+        })
+
+        res.render('../views/userPagPrincipal', {user, reserva});
     }
 }
