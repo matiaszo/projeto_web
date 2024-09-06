@@ -14,10 +14,6 @@ const reservaLocal = database.define('ReservaLocal',
         Data: {
             type:Sequelize.DATEONLY,
             allowNull: false
-        },
-        Ativo: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
         }
     }
 );

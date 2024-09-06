@@ -41,7 +41,6 @@ module.exports = {
 
         const reserva = await reservas.create({
             Data: data.dia,
-            Ativo: true,
             IDUsuario: userId,
             IDLocal: req.body.local[0]
         })

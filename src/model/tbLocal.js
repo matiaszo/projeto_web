@@ -16,10 +16,6 @@ const local = database.define('Local',
         Capacidade: {
             type: Sequelize.INTEGER,
             allowNull: false
-        },
-        Ativo: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
         }
     }
 );

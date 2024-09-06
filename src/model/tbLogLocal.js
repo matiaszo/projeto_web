@@ -21,10 +21,6 @@ const logLocal = database.define('LogLocal',
             type: Sequelize.INTEGER,
             allowNull: false
         },
-        Ativo: {
-            type: Sequelize.BOOLEAN,
-            allowNull: false
-        },
         Acao: {
             type: Sequelize.STRING(100),
             allowNull: false

@@ -12,6 +12,8 @@ const admMain = require('./src/controllers/admMain')
 const admChurrasqueira = require('./src/controllers/admChurrasqueira')
 const admReserva = require('./src/controllers/admReserva')
 const admExcluirChurrasqueira = require('./src/controllers/admExcluirChurrasqueira')
+const admEditarChurrasqueira = require('./src/controllers/admEditarChurrasqueira')
+
 
 route.get('/', home.getHome);
 
@@ -38,6 +40,8 @@ route.get('/admReservas/:id', admReserva.getAdmReserva)
 route.post('/admReservas', admReserva.postAdmReserva)
 
 route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.postAdmExcluirChurrasqueira)
+
+route.post('/editarChurrasqueira/:idlocal/:iduser', admEditarChurrasqueira.postAdmEditarChurrasqueira)
 
 
 module.exports = route;
