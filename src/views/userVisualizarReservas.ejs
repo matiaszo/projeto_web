@@ -24,12 +24,16 @@
             <div class="user">
                     <h5> Olá, <%=user[0].Nome%> </h5>     
             </div>
+            <a class="tema" onclick="mudarTema()">
+                <img src="/img/moon.png" id="moon" alt="" >
+                <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+           </a>
         </nav>
     </header>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-          <div class="modal-content">
+        <div class="modal-dialog " >
+          <div class="modal-content" id="modalCancelar" >
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">Cancelar reserva:</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -63,7 +67,7 @@
         <div class="container">       
             <div class="col-md-12 cards">
                 <% for(let i = 0; i < reserva.length; i++){ %>
-                    <div class="card col-md-3">
+                    <div class="card col-md-3" id="cardReserva<%=i%>">
                         <img class="card-img-top" src="/img/img_carrossel/aberta.jpg" alt="Imagem de capa do card">
                         <ul class="list-group list-group-flush p-10">
                             <li class="list-group" id="Local<%=reserva[i].IDReservaLocal%>" > Local: <%=reserva[i]['Local.Nome']%> </li>

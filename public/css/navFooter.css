@@ -42,6 +42,27 @@ header{
     justify-content: space-around;
 }
 
+.tema {
+    height: 40px;
+    width: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.tema img {
+    height: 100%;
+    width: 100%;
+}
+
+.darkMode{
+    background-color: rgb(24, 24, 24);
+    color: rgb(255, 255, 255);
+}
+
+
 .titulo a{
     display: flex;
     gap: 10px;
@@ -53,9 +74,11 @@ header{
 
 }
 
+
 .titulo span{
     font-family: "Seaweed Script", cursive;
 }
+
 
 footer{
     background-color: #762626 ;
