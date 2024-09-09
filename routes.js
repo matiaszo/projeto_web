@@ -5,17 +5,16 @@ const home = require('./src/controllers/home');
 const logIn = require('./src/controllers/log');
 const cadastroUsuario = require('./src/controllers/userCad');
 const userMain = require('./src/controllers/userMain');
-const userVerReservas = require('./src/controllers/userVisualizarReservas')
-const userReservar = require('./src/controllers/userReservar')
-
-const admMain = require('./src/controllers/admMain')
-const admChurrasqueira = require('./src/controllers/admChurrasqueira')
-const admReserva = require('./src/controllers/admReserva')
-const admExcluirChurrasqueira = require('./src/controllers/admExcluirChurrasqueira')
-
-const admEditarChurrasqueira = require('./src/controllers/admEditarChurrasqueira')
-
+const userVerReservas = require('./src/controllers/userVisualizarReservas');
+const userReservar = require('./src/controllers/userReservar');
 const userCancelarReserva = require('./src/controllers/userCancelarReserva');
+
+const admMain = require('./src/controllers/admMain');
+const admChurrasqueira = require('./src/controllers/admChurrasqueira');
+const admReserva = require('./src/controllers/admReserva');
+const admExcluirChurrasqueira = require('./src/controllers/admExcluirChurrasqueira');
+const admEditarChurrasqueira = require('./src/controllers/admEditarChurrasqueira');
+
 
 route.get('/', home.getHome);
 
