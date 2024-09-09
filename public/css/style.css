@@ -81,6 +81,8 @@ h4{
 
 a{
   width: 98%;
+  text-decoration: none;
+  color: aliceblue;
 }
 
 .card ul {
