@@ -145,6 +145,22 @@ function mudarTema(){
             console.log('erro adm')
         }
 
+        try{
+            let tabelaReserva = document.getElementById("tabela");
+            tabelaReserva.classList = 'table table-dark';
+        }
+        catch{
+            console.log("erro na tabela")
+        }
+
+         
+        try{
+            let modalAddChurras = document.getElementById('modalAddChurras');
+            modalAddChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+            modalAddChurras.style.color = 'white'
+        } catch{
+            console.log('erro no modal')
+        }
 
     } else{
 
@@ -210,6 +226,14 @@ function mudarTema(){
             }
         } catch{
             console.log("erro card adm")
+        }
+
+        try{
+            let tabelaReserva = document.getElementById("tabela");
+            tabelaReserva.classList = 'table ';
+        }
+        catch{
+            console.log("erro na tabela")
         }
     }
 }
