@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap');
+
+
 *{
-  margin: 0px;
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
 }
+
 main{
   padding: 10px;
 }
@@ -117,4 +123,12 @@ a{
   border-radius: 15px;
   display: flex;
   align-items: center;
+}
+
+.btn{
+  background-color:#762626;
+  border-color: #762626;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
 }
