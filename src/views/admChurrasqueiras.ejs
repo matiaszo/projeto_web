@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
@@ -27,12 +26,15 @@
          <div class="user d-flex gap-2">
             <h5>Administrador: <%=user[0].Nome %>  </h5><h5> Edv: <%=user[0].EDV%> </h5>     
          </div>
+        <a class="tema" onclick="mudarTema()">
+            <img src="/public/img/moon.png" id="moon" alt="" >
+            <img src="/public/img/sun.png" alt="" id="sun" style="display: none;" >
+        </a>
       </div>
     </nav>
 </header>
 
   <main>
-
     <div class="modal fade" id="deletar">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -81,8 +83,8 @@
     </div>
 
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-      <div class="modal-content">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modalAddChurras">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Insira os dados</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -116,7 +118,7 @@
       </div>
     </div>
     <div class="container">
-      <table class="table table-striped">
+      <table class="table table-striped" id="tabela">
         <thead>
           <tr class="poppins-regular-form">
             <th scope="col">ID</th>

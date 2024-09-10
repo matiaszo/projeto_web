@@ -28,6 +28,10 @@
                <div class="user">
                     <h5> Olá, <%=user[0].Nome%> </h5>     
                </div>
+               <a class="tema" onclick="mudarTema()">
+                    <img src="/img/moon.png" id="moon" alt="" >
+                    <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+               </a>
             </div>
         </nav>
     </header>
@@ -36,7 +40,7 @@
         <div class="container-fluid">
             <div class="row mb-5">
                 <div class="col-md-6 mb-5 d-flex justify-content-center">
-                    <div class="card">
+                    <div class="card" id="card1">
                         <img class="card-img-top" src="/img/img_carrossel/salao.jpg" alt="Imagem quadra de futsal">
                         <div class="card-body d-flex justify-content-center align-items-center">
                             <a href="/userReservar/<%=user[0].IDUsuario%>" name="churrasqueira" type="button" class="btn btn-danger btn-lg"><h4>Churrasqueiras</h4></a>
@@ -44,7 +48,7 @@
                     </div>
                 </div>  
                 <div class="col-md-6 mb-5 d-flex justify-content-center">
-                    <div class="card">
+                    <div class="card" id="card2">
                         <img class="card-img-top" src="/img/img_carrossel/churrasqueiras.jpg" alt="Imagem churrasqueiras">
                         <div class="card-body d-flex justify-content-center align-items-center">
                                 <button name="churrasqueira" type="button" class="btn btn-danger btn-lg"><h4>Quadras</h4></button>
@@ -55,5 +59,6 @@
             </div>
         </div>
     </main>
+    <script src="/js/script.js"></script>
 </body>
 </html>
