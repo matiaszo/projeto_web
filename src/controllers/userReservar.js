@@ -26,7 +26,6 @@ module.exports = {
             attributes: ['IDLocal', 'Nome', 'Capacidade'],
         })
 
-        console.log(user)
         res.render('../views/userReservar', {reserva, user, local});
     },
 

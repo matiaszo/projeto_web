@@ -20,8 +20,8 @@ module.exports = ({
         res.render('../views/admChurrasqueiras', {churrasqueira, user, erro: false})
     },
     async postAdmChurrasqueira(req, res){
-        data = req.body;
-        id = req.params.id
+        const data = req.body;
+        const id = req.params.id
 
         const user = await usuario.findAll({
             raw: true,
@@ -34,12 +34,13 @@ module.exports = ({
             attributes: ['IDLocal', 'Nome', 'Capacidade']
         })
 
-        repetida = await churrasqueiras.findAll({
+        const repetida = await churrasqueiras.findAll({
             raw: true,
+            attributes: ['Nome'],
             where: {Nome: data.nomeChurrasqueira}
         })
 
-        console.log(repetida)
+
         if(repetida[0]){
             res.render('../views/admChurrasqueiras', {churrasqueira, user, erro: "Já existe uma churrasqueira com esse nome."});
             return;
@@ -50,9 +51,9 @@ module.exports = ({
             Capacidade: data.capacidadeChurrasqueira
         });
 
-        idLocal = await churrasqueiras.findAll({
+        const idLocal = await churrasqueiras.findAll({
             raw: true,
-            attributes: ['IDlocal'],
+            attributes: ['IDLocal'],
             where: {Nome: data.nomeChurrasqueira}
         })
 
