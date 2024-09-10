@@ -30,13 +30,9 @@ module.exports = {
     },
 
     async postUserReservar(req, res){
-        data = req.body
-        userId = req.params.id
+        const data = req.body
+        const userId = req.params.id
 
-        const local = await locais.findAll({
-            raw: true,
-            attributes: ['IDLocal']
-        })
 
         const reserva = await reservas.create({
             Data: data.dia,

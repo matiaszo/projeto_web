@@ -37,12 +37,15 @@ function editarChurrasqueira(idChurrasqueira, idUsuario){
     
     formEditar.action = "/editarChurrasqueira/" + idChurrasqueira + "/" + idUsuario;
     formEditar.method = 'post'
-    
+
     nomeChurrasqueiraModal.value = nomeAntigo.trim();
     capacidadeChurrasqueiraModal.value = parseInt(capacidadeAntiga, 10);
 }
 
-function cancelaReserva(idReservaLocal){
+function cancelaReserva(idReservaLocal, iduser){
+    let form = document.getElementById('cancelaReserva');
+    form.action = '/excluirReservaLocal/' + idReservaLocal + '/' + iduser
+
     let local = document.getElementById('Local'+ idReservaLocal ).innerHTML;
     let capacidade = document.getElementById('Capacidade' + idReservaLocal).innerHTML;
     let data = document.getElementById('Data' + idReservaLocal).innerHTML;
@@ -57,9 +60,6 @@ function cancelaReserva(idReservaLocal){
     capacidadeModal.innerHTML = capacidade;
     dataModal.innerHTML = data;
     horaModal.innerHTML = horario;
-
-    let form = document.getElementById('cancelaReserva');
-    form.action = '/excluirReservaLocal/' + idReservaLocal
 }
 
 function excluirChurrasqueira(idChurrasqueira, idUsuario){

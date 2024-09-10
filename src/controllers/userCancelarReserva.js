@@ -6,7 +6,8 @@ const logReservaLocal = require ('../model/tbLogReservaLocal');
 
 module.exports = {
     async postUserExcluirReserva(req, res){
-        idReserva = req.params.idreserva;
+        const idReserva = req.params.idreserva;
+        const iduser = req.params.iduser;
 
         const reservaCancelada = await reserva.findOne({
             raw:true,
@@ -25,6 +26,6 @@ module.exports = {
             where:{IDReservaLocal: idReserva}
         })
 
-        res.redirect('/userVisualizarReservas/' + reservaCancelada.IDUsuario);
+        res.redirect('/userVisualizarReservas/' + iduser);
     }
 }

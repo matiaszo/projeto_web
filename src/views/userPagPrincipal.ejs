@@ -5,33 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style_user_main.css">
     <link rel="stylesheet" href="/css/navFooter.css">
 
     <title>Clube Bosch</title>
 </head>
+
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 
     <header>
         <nav class="navbar">
             <div class="titulo">
-                <a><h1><span>Clube</span> Bosch</h1></a>
+                <a>
+                    <h1><span>Clube</span> Bosch</h1>
+                </a>
             </div>
             <div class="funcoes">
                 <div class="minhasReservas">
-                    <a href="/userVisualizarReservas/<%=user[0].IDUsuario%>" ><h5>Minhas reservas</h5></a>
+                    <a href="/userVisualizarReservas/<%=user[0].IDUsuario%>">
+                        <h5>Minhas reservas</h5>
+                    </a>
                 </div>
-               <div class="user">
-                    <h5> Olá, <%=user[0].Nome%> </h5>     
-               </div>
-               <a class="tema" onclick="mudarTema()">
-                    <img src="/img/moon.png" id="moon" alt="" >
-                    <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
-               </a>
+                <div class="user">
+                    <h5> Olá, <%=user[0].Nome%>
+                    </h5>
+                </div>
+                <a class="tema" onclick="mudarTema()">
+                    <img src="/img/moon.png" id="moon" alt="">
+                    <img src="/img/sun.png" alt="" id="sun" style="display: none;">
+                </a>
             </div>
         </nav>
     </header>
@@ -41,31 +53,38 @@
             <div class="row mb-5">
                 <div class="col-md-6 mb-5 d-flex justify-content-center">
                     <div class="card" id="card1">
-                        <img class="card-img-top" src="/img/img_carrossel/churrasqueiras.jpg" alt="Imagem quadra de futsal">
+                        <img class="card-img-top" src="/img/img_carrossel/churrasqueiras.jpg"
+                            alt="Imagem quadra de futsal">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                            <a href="/userReservar/<%=user[0].IDUsuario%>" name="churrasqueira" type="button" class="btn btn-danger btn-lg"><h4>Churrasqueiras</h4></a>
+                            <a href="/userReservar/<%=user[0].IDUsuario%>" name="churrasqueira" type="button"
+                                class="btn btn-danger ">
+                                <h4>Churrasqueiras</h4>
+                            </a>
                         </div>
                     </div>
-                </div>  
+                </div>
                 <div class="col-md-6 mb-5 d-flex justify-content-center">
                     <div class="card" id="card2">
                         <img class="card-img-top" src="/img/img_carrossel/salao.jpg" alt="Imagem churrasqueiras">
                         <div class="card-body d-flex justify-content-center align-items-center">
-                                <button name="churrasqueira" type="button" class="btn btn-danger btn-lg"><h4>Quadras</h4></button>
-                            </div>
+                            <button name="churrasqueira" type="button" class="btn btn-danger ">
+                                <h4>Quadras</h4>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </main>
     <footer class="fixed-bottom" style="background-color: transparent;">
         <a id="btnSair" href="/">
-          <button  style="width: 80px;" class="btn btn-danger">
-            Sair
-          </button>
+            <button style="width: 80px;" class="btn btn-danger">
+                Sair
+            </button>
         </a>
     </footer>
     <script src="/js/script.js"></script>
 </body>
+
 </html>

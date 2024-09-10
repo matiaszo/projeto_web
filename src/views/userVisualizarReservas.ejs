@@ -35,24 +35,18 @@
         <div class="modal-dialog " >
           <div class="modal-content" id="modalCancelar" >
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Cancelar reserva:</h1>
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Deseja cancelar a reserva?</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body modalCancelaReserva">
-                <ul class="list-group list-group-flush p-10 gap-10">
-                    <li class="list-group" id="LocalModal">Local: </li>
-                    <li class="list-group" id="CapModal">Capacidade: </li>
-                    <li class="list-group" id="DataModal">Data: </li>
-                    <li class="list-group" id="HoraModal">Horario: </li>
-                </ul>   
+             <div class="modal-body modalCancelaReserva"> 
                 <div class="acoes">
-                    <form id="cancelaReserva" action="/excluirReservaLocal/" method="post">
+                    <form id="cancelaReserva" action="" method="post">
                         <button type="submit" class="btn btn-danger btn-sm cancelar" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            <h6>Cancelar Reserva</h6>
+                            <h6 style="margin-top: 4px; margin-bottom: 4px;">Cancelar Reserva</h6>
                         </button>     
                     </form>
                     <button type="button" class=" btn btn-sm sair" data-bs-toggle="modal" >
-                        <h6>Sair</h6>
+                        <h6 style="margin-top: 4px; margin-bottom: 4px;">Sair</h6>
                     </button>     
                 </div>                       
             </div>
@@ -73,10 +67,9 @@
                             <li class="list-group" id="Local<%=reserva[i].IDReservaLocal%>" > Local: <%=reserva[i]['Local.Nome']%> </li>
                             <li class="list-group" id="Capacidade<%=reserva[i].IDReservaLocal%>" >Capacidade: <%=reserva[i]['Local.Capacidade']%></li>
                             <li class="list-group" id="Data<%=reserva[i].IDReservaLocal%>"> Data: <%=reserva[i].Data%></li>
-                            <li class="list-group" id="Hora<%=reserva[i].IDReservaLocal%>"> Horario: </li>
                         </ul>
                         <div class="card-footer d-flex justify-content-center">      
-                            <button id="churrasqueira" type="submit" class="btn btn-danger btn-sm cancelar" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="cancelaReserva('<%=reserva[i].IDReservaLocal%>')"">
+                            <button id="churrasqueira" type="submit" class="btn btn-danger btn-sm cancelar" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="cancelaReserva('<%=reserva[i].IDReservaLocal%>', '<%=user[0].IDUsuario%>')">
                                 <h5>Cancelar Reserva</h5>
                             </button>
                         </div>

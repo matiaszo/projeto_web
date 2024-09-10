@@ -49,16 +49,17 @@
                 <div class="col" style="color: #762626">
                     <h3><strong>Reservas</strong></h3>
                 </div>
-                <div class="col d-flex justify-content-center">
-                    <select disabled class="form-select" aria-label="Default select example">
+                <div class="col d-flex justify-content-end">
+                    <form>
+                    <select disabled style=" background-color: aliceblue;" class="form-select" aria-label="Default select example">
                         <option selected>Churrasqueira</option>
-
                     </select>   
+                </form>
                     <form action="/admReservas/<%=user[0].IDUsuario%>" method="post">
                         <select name="local" id="local" onchange="this.form.submit()" class="form-select" aria-label="Default select example">
+                            <option value="none"></option>
                             <% for(let i=0; i < local.length; i++) { %>
-                                <option value="<%=local[i].IDLocal %>" <%=id==local[i].IDLocal ? 'selected' : '' %> > <%=local[i].Nome %>
-                                </option>
+                                <option value="<%=local[i].IDLocal %>" <%=id==local[i].IDLocal ? 'selected' : '' %> > <%=local[i].Nome%> </option>
                                 <% } %>
                         </select>
                     </form>

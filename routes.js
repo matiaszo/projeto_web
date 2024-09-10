@@ -44,5 +44,5 @@ route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.pos
 
 route.post('/editarChurrasqueira/:idlocal/:iduser', admEditarChurrasqueira.postAdmEditarChurrasqueira);
 
-route.post('/excluirReservaLocal/:idreserva', userCancelarReserva.postUserExcluirReserva );
+route.post('/excluirReservaLocal/:idreserva/:iduser', userCancelarReserva.postUserExcluirReserva);
 module.exports = route;
