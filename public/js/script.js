@@ -156,9 +156,11 @@ function mudarTema(){
 
             let inputNome = document.getElementById('nomeChurrasqueira');
             inputNome.style.backgroundColor = 'rgb(30, 30, 30)';
+            inputNome.style.color = 'white';
 
             let inputCapacidade= document.getElementById('capacidadeChurrasqueira');
             inputCapacidade.style.backgroundColor = 'rgb(30, 30, 30)';
+            inputCapacidade.style.color = 'white';
         } catch{
             console.log('erro no modal add churrras')
         }
@@ -170,9 +172,11 @@ function mudarTema(){
 
             let inputNomeEdita = document.getElementById('nomeChurrasqueiraModal');
             inputNomeEdita.style.backgroundColor = 'rgb(30, 30, 30)';
+            inputNomeEdita.style.color = 'white';
 
             let inputCapacidadeEdita = document.getElementById('capacidadeChurrasqueiraModal');
             inputCapacidadeEdita.style.backgroundColor = 'rgb(30, 30, 30)';
+            inputCapacidadeEdita.style.color = 'white';
         }
         catch{
             console.log('erro modal editar')
@@ -267,9 +271,11 @@ function mudarTema(){
 
             let inputNome = document.getElementById('nomeChurrasqueira');
             inputNome.style.backgroundColor = '';
+            inputNome.style.color = '';
 
             let inputCapacidade= document.getElementById('capacidadeChurrasqueira');
             inputCapacidade.style.backgroundColor = '';
+            inputCapacidade.style.color = '';
 
         } catch{
             console.log('erro no modal')
@@ -285,6 +291,8 @@ function mudarTema(){
 
             let inputCapacidadeEdita = document.getElementById('capacidadeChurrasqueiraModal');
             inputCapacidadeEdita.style.backgroundColor = '';
+            inputNomeEdita.style.color = '';
+            inputCapacidadeEdita.style.color = '';
         }
         catch{
             console.log('erro modal editar')
