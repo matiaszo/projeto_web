@@ -74,17 +74,17 @@ header{
 
 }
 
-
 .titulo span{
     font-family: "Seaweed Script", cursive;
 }
 
 
 footer{
+    background-color: #762626;
     color: aliceblue;
     padding: 20px;
     display: flex;
-    justify-content:right;
     align-items: center;
+    justify-content: space-around;
 }
 
