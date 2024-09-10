@@ -41,7 +41,7 @@
             </div>
             <div class="sessao">
                 <label for="local">Local:</label>
-                <select class="form-select form-select-lg" aria-label="Default select example" name="local" id="localReserva" onchange="mudarCapacidade()" style="border: #76262679 solid 1px;" >
+                <select class="form-select form-select-lg" aria-label="Default select example" name="local" id="localReserva" onchange="mudarCapacidade()" style="border: #76262679 solid 1px;"  required>
                         <option> </option>
                     <% for (let i = 0; i < local.length; i++) { %>
                         <option value="<%=local[i].IDLocal%>/<%=local[i].Capacidade%>"> <%=local[i].Nome%> </option>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="sessao">
                     <label for="data">Data:</label>
-                    <input type="date" class="form-control form-control-lg" name="dia" id="dataReserva" >
+                    <input type="date" class="form-control form-control-lg" name="dia" id="dataReserva" required >
                 </div>
                 <small>**Caso a data e o local forem de interesse de outros colaboradores, todos participarão de um sorteio</small>
                 <button type="submit" id="btnReservar" class="btn btn-lg btn-light" style="color: aliceblue; background-color: #762626;"><strong>Reservar</strong></button>
