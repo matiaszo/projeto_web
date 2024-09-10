@@ -80,6 +80,7 @@ header{
 
 
 footer{
+    display: flex;
     background-color: #762626;
     color: aliceblue;
     padding: 20px;
@@ -88,3 +89,7 @@ footer{
     justify-content: space-around;
 }
 
+#btnSair{
+    display: flex;
+    justify-content: right;
+}

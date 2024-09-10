@@ -42,6 +42,10 @@
           <h5> Edv: <%=user[0].EDV%>
           </h5>
         </div>
+        <a class="tema" onclick="mudarTema()">
+          <img src="/img/moon.png" id="moon" alt="" >
+          <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+      </a>
       </div>
     </nav>
   </header>
@@ -69,7 +73,7 @@
 
     <div class="modal fade" id="editar">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content" id="modalAddChurras">
           <div class="modal-header">
             <h5 class="modal-title">EDITAR</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -97,8 +101,8 @@
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog ">
-        <div class="modal-content">
+      <div class="modal-dialog">
+        <div class="modal-content" id="modalAddChurras" >
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Insira os dados</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -177,14 +181,12 @@
       </table>
     </div>
   </main>
-  <footer class="fixed-bottom">
-    <div>
-      <a href="/">
-        <button style="width: 80px;" class="btn btn-danger">
-          Sair
-        </button>
-      </a>
-    </div>
+  <footer class="fixed-bottom" style="background-color: transparent;">
+    <a id="btnSair" href="/">
+      <button  style="width: 80px;" class="btn btn-danger">
+        Sair
+      </button>
+    </a>
   </footer>
   <script src="/js/script.js"></script>
 </body>

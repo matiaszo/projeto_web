@@ -151,14 +151,14 @@ function mudarTema(){
             console.log("erro na tabela")
         }
 
-         
         try{
             let modalAddChurras = document.getElementById('modalAddChurras');
             modalAddChurras.style.backgroundColor = 'rgb(30, 30, 30)';
             modalAddChurras.style.color = 'white'
         } catch{
-            console.log('erro no modal')
+            console.log('erro no modal add churrras')
         }
+
 
     } else{
 
@@ -232,6 +232,15 @@ function mudarTema(){
         }
         catch{
             console.log("erro na tabela")
+        }
+
+        try{
+            let modalAddChurras = document.getElementById('modalAddChurras');
+            modalAddChurras.style.backgroundColor = '' ;
+            modalAddChurras.style.color = '' ;
+
+        } catch{
+            console.log('erro no modal')
         }
     }
 }
