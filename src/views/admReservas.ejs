@@ -37,7 +37,7 @@
                 </div>
                 <a class="tema" onclick="mudarTema()">
                     <img src="/img/moon.png" id="moon" alt="" >
-                    <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+                    <img src="/img/sun.png" alt="" id="sun" style="display: none;">
                </a>
             </div>
         </nav>
@@ -54,7 +54,7 @@
                         <option selected>Churrasqueira</option>
 
                     </select>   
-                    <form action="/admReservas<%=user[0].IDUsuario%>" method="post">
+                    <form action="/admReservas/<%=user[0].IDUsuario%>" method="post">
                         <select name="local" id="local" onchange="this.form.submit()" class="form-select" aria-label="Default select example">
                             <% for(let i=0; i < local.length; i++) { %>
                                 <option value="<%=local[i].IDLocal %>" <%=id==local[i].IDLocal ? 'selected' : '' %> > <%=local[i].Nome %>
