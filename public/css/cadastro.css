@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap');
 
 
 *{
     margin: 0px;
+    font-family: "Poppins", sans-serif;
 }
+
 
 main{
     display: flex;
@@ -60,3 +63,20 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
+.sair{
+    background-color:#762626;
+    color: aliceblue;
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
+    height: 56px;
+}
+
+footer{
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+}

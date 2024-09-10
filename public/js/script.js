@@ -18,8 +18,6 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
 function mudarCapacidade(){
     let local = document.getElementById('localReserva').value;
     local = local.split('/');

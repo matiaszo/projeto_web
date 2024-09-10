@@ -2,7 +2,7 @@ const usuarios = require("../model/tbUsuario")
 
 module.exports = {
     async getLogIn(req,res){
-        res.render('../views/logIn')
+        res.render('../views/logIn', {erro: false})
     },
     
     async postLogIn(req, res){
@@ -13,7 +13,7 @@ module.exports = {
             where: {EDV: data.edv}
         })
         if (!usuario[0]){            
-            res.render('../views/logIn')
+            res.render('../views/logIn', {erro: "EDV não cadastrado."})
             return;
         }
 
@@ -24,7 +24,7 @@ module.exports = {
                     res.redirect('/userPagPrincipal/' + usuario[0].IDUsuario)
                 }
             }else{
-                res.render('../views/logIn')
+                res.render('../views/logIn', {erro: "EDV não cadastrado."})
         }
     }
 }

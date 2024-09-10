@@ -12,6 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
     <main>
+
+        <% if(erro){ %>
+            <script>
+                alert('<%=erro%>')
+            </script>
+        <%}%>
+
         <form method="post" action="/logIn">
             <h1><span>Clube</span> Bosch </h1>
             <div class="sessao">
@@ -27,6 +34,16 @@
                     <a id="cadastrar" href="/userCadastro">Cadastre-se</a>
             </div>
         </form>
+        <footer class="fixed-bottom">
+            <div>
+              <a href="/">
+                <button style="width: 80px;" class="sair btn-danger">
+                  Sair
+                </button>
+              </a>
+            </div>
+          </footer>
     </main>
+    <script src="/js/script.js"></script>
 </body>
 </html>
