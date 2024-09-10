@@ -22,22 +22,22 @@
         <form method="post" action="/usercadastro">
             <h1><span>Clube</span><strong> Bosch </strong> </h1>
             <div class="sessao">
-                <input type="number" class="form-control form-control-lg" value="<%=(data) ? data.edv : ''%>" placeholder="Edv" name="edv" id="edv" aria-describedby="edv">
+                <input type="number" class="form-control form-control-lg" value="<%=(data) ? data.edv : ''%>" placeholder="Edv" name="edv" id="edv" aria-describedby="edv" required>
             </div>
             <div class="sessao">
-                <input type="text" class="form-control form-control-lg" value="<%=(data) ? data.nome : ''%>" placeholder="Nome" name="nome" id="nome" aria-describedby="nome">
+                <input type="text" class="form-control form-control-lg" value="<%=(data) ? data.nome : ''%>" placeholder="Nome" name="nome" id="nome" aria-describedby="nome" required>
             </div>
             <div class="sessao">
-                <input type="text" class="form-control form-control-lg" value="<%=(data) ? data.sobrenome : ''%>" placeholder="Sobrenome" name="sobrenome" id="sobrenome" aria-describedby="sobrenome">
+                <input type="text" class="form-control form-control-lg" value="<%=(data) ? data.sobrenome : ''%>" placeholder="Sobrenome" name="sobrenome" id="sobrenome" aria-describedby="sobrenome" required>
             </div>
             <div class="sessao">
-                <input type="email" class="form-control form-control-lg" value="<%=(data) ? data.email : ''%>" placeholder="Email" name="email" id="email" aria-describedby="email">
+                <input type="email" class="form-control form-control-lg" value="<%=(data) ? data.email : ''%>" placeholder="Email" name="email" id="email" aria-describedby="email" required>
             </div>
             <div class="sessao">
-                <input type="password" class="form-control form-control-lg" placeholder="Senha" name="senha" id="senha">
+                <input type="password" class="form-control form-control-lg" placeholder="Senha" name="senha" id="senha" required>
             </div>
             <div class="sessao">
-                <input type="password" class="form-control form-control-lg" placeholder="Confirmar senha" name="confirmarsenha" id="confirmarsenha">
+                <input type="password" class="form-control form-control-lg" placeholder="Confirmar senha" name="confirmarsenha" id="confirmarsenha" required>
             </div>
             <button type="submit" class="btn btn-lg btn-light" style="color: aliceblue; background-color: #762626;"><strong>Cadastrar</strong></button>
         </form>
