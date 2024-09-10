@@ -21,13 +21,13 @@
             <div class="titulo">
                 <a href="/userPagPrincipal/<%=user[0].IDUsuario%>"><h1><span>Clube</span> Bosch</h1></a>
             </div>
-            <div class="user">
+            <div class="user" style="display: flex; justify-content: space-around; width: 25%; align-items: center;">
                     <h5> Olá, <%=user[0].Nome%> </h5>     
+                    <a class="tema" onclick="mudarTema()">
+                        <img src="/img/moon.png" id="moon" alt="" >
+                        <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+                   </a>
             </div>
-            <a class="tema" onclick="mudarTema()">
-                <img src="/img/moon.png" id="moon" alt="" >
-                <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
-           </a>
         </nav>
     </header>
 
@@ -84,16 +84,13 @@
                 <% } %>
             </div>
     </main>
-            <footer class="fixed-bottom">
-                <div>
-                  <a href="/">
-                    <button style="width: 80px;" class="btn btn-danger">
-                      Sair
-                    </button>
-                  </a>
-                </div>
-              </footer>
-        </div>
+    <footer class="fixed-bottom" style="background-color: transparent;">
+        <a id="btnSair" href="/">
+          <button  style="width: 80px;" class="btn btn-danger">
+            Sair
+          </button>
+        </a>
+    </footer>
     </body>
     <script src="/js/script.js"></script>
 

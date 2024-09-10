@@ -91,5 +91,15 @@ footer{
 
 #btnSair{
     display: flex;
+    text-decoration: none;
+    width: 100%;
     justify-content: right;
+}
+
+#btnSair .btn{
+    background-color:#762626;
+    border-color: #762626;
+    border-radius: 15px;
+    padding: 15px;
+    width: 100%;
 }

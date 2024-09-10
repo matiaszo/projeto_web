@@ -15,7 +15,7 @@
     <header>
         <nav class="navbar">
             <div class="titulo">
-                <a href="/userReservar"><h1><span>Clube</span> Bosch</h1></a>
+                <a href="/userPagPrincipal/<%=user[0].IDUsuario%>"><h1><span>Clube</span> Bosch</h1></a>
             </div>
             <div class="funcoes">
                 <div class="minhasReservas">
@@ -61,15 +61,11 @@
             </form>
 
         </main>
-        <footer class="fixed-bottom">
-            <div>
-              <a href="/">
-                <button class="sair btn-danger">
-                  Sair
-                </button>
-              </a>
-            </div>
-          </footer>
+        <footer class="fixed-bottom" style="background-color: transparent;">
+            <a id="btnSair" href="/">
+              <button  style="width: 80px;" class="btn btn-danger">Sair</button>
+            </a>
+        </footer>
         <script src="/js/script.js"></script>
     </body>
 </html>

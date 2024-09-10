@@ -53,13 +53,13 @@
   <main>
     <div class="modal fade" id="deletar">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content" id="modalExcluirChurras">
           <div class="modal-header">
             <h5 class="modal-title">Confirmar exclusão</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Tem certeza que deseja excluir a reserva? </p>
+            <p>Tem certeza que deseja excluir a churrasqueira? </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -73,13 +73,13 @@
 
     <div class="modal fade" id="editar">
       <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" id="modalAddChurras">
+        <div class="modal-content" id="editarChurrasqueira">
           <div class="modal-header">
             <h5 class="modal-title">EDITAR</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="" id="editarChurrasqueira" method="post">
+            <form action=""  method="post">
               <div class="mb-3">
                 <label for="exampleInputText" class="form-label poppins-regular-form">Nome:</label>
                 <input type="text" class="form-control" id="nomeChurrasqueiraModal" name="nomeChurrasqueira">
@@ -102,7 +102,7 @@
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content" id="modalAddChurras" >
+        <div class="modal-content" id="modalAddChurras">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">Insira os dados</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

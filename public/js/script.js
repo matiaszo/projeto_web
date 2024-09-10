@@ -151,10 +151,38 @@ function mudarTema(){
 
         try{
             let modalAddChurras = document.getElementById('modalAddChurras');
-            modalAddChurras.style.backgroundColor = 'rgb(30, 30, 30)';
             modalAddChurras.style.color = 'white'
+            modalAddChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+
+            let inputNome = document.getElementById('nomeChurrasqueira');
+            inputNome.style.backgroundColor = 'rgb(30, 30, 30)';
+
+            let inputCapacidade= document.getElementById('capacidadeChurrasqueira');
+            inputCapacidade.style.backgroundColor = 'rgb(30, 30, 30)';
         } catch{
             console.log('erro no modal add churrras')
+        }
+
+        try{
+            let editaChurras = document.getElementById('editarChurrasqueira');
+            editaChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+            editaChurras.style.color = 'white'
+
+            let inputNomeEdita = document.getElementById('nomeChurrasqueiraModal');
+            inputNomeEdita.style.backgroundColor = 'rgb(30, 30, 30)';
+
+            let inputCapacidadeEdita = document.getElementById('capacidadeChurrasqueiraModal');
+            inputCapacidadeEdita.style.backgroundColor = 'rgb(30, 30, 30)';
+        }
+        catch{
+            console.log('erro modal editar')
+        }
+
+        try{
+            let excluiChurras = document.getElementById('modalExcluirChurras');
+            excluiChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+        } catch{
+            console.log('erro no modal excluir churras')
         }
 
 
@@ -237,8 +265,36 @@ function mudarTema(){
             modalAddChurras.style.backgroundColor = '' ;
             modalAddChurras.style.color = '' ;
 
+            let inputNome = document.getElementById('nomeChurrasqueira');
+            inputNome.style.backgroundColor = '';
+
+            let inputCapacidade= document.getElementById('capacidadeChurrasqueira');
+            inputCapacidade.style.backgroundColor = '';
+
         } catch{
             console.log('erro no modal')
+        }
+
+        try{
+            let editaChurras = document.getElementById('editarChurrasqueira');
+            editaChurras.style.backgroundColor = '';
+            editaChurras.style.color = ''
+
+            let inputNomeEdita = document.getElementById('nomeChurrasqueiraModal');
+            inputNomeEdita.style.backgroundColor = '';
+
+            let inputCapacidadeEdita = document.getElementById('capacidadeChurrasqueiraModal');
+            inputCapacidadeEdita.style.backgroundColor = '';
+        }
+        catch{
+            console.log('erro modal editar')
+        }
+
+        try{
+            let excluiChurras = document.getElementById('modalExcluirChurras');
+            excluiChurras.style.backgroundColor = '';
+        } catch{
+            console.log('erro no modal excluir churras')
         }
     }
 }
