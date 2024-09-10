@@ -12,13 +12,24 @@ module.exports = {
     let idUser = req.params.iduser;
     let idLocal = req.params.idlocal;
 
+    const churrasqueira = await churrasqueiras.findAll({
+        raw: true,
+        attributes: ['IDLocal', 'Nome', 'Capacidade']
+    })
+
+    const user = await usuario.findAll({
+        raw: true,
+        attributes: ['EDV', 'Senha', 'Nome', 'IDUsuario'],
+        where: {IDUsuario: id}
+    })
+
     const repetido = await churrasqueiras.findAll({
         raw: true,
         attributes: ['IDLocal'],
         where: {Nome: data.nomeChurrasqueira}
     })
 
-    if (repetido){
+    if (repetido[0]){
         res.render('../views/admChurrasqueiras', {churrasqueira, user, erro: 'Voce não pode colocar o mesmo nome em duas churrasqueiras!'});
         return;
     }
@@ -27,7 +38,8 @@ module.exports = {
         Nome: data.nomeChurrasqueira,
         Capacidade: data.capacidadeChurrasqueira},
         {
-            where: {IDLocal: idLocal}}
+            where: {IDLocal: idLocal}
+        }
     )
 
     await logChurrasqueiras.create({

@@ -64,8 +64,6 @@ module.exports = ({
             Acao: "Churrasqueira criada"
         });
 
- 
-
-        res.redirect('/admChurrasqueiras/'+id);
+        res.render('../views/admChurrasqueiras', {churrasqueira, user, erro: false});
     }
 })

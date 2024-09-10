@@ -1,3 +1,4 @@
+const { post } = require("../../routes");
 
 
 function pad(valor) { // completa com zeros à esquerda, caso necessário
@@ -27,14 +28,16 @@ function mudarCapacidade(){
 
 function editarChurrasqueira(idChurrasqueira, idUsuario){
     let formEditar = document.getElementById('editarChurrasqueira');
-    formEditar.action = "/editarChurrasqueira/" + idChurrasqueira + "/" + idUsuario;
     
     let nomeChurrasqueiraModal = document.getElementById('nomeChurrasqueiraModal');
     let capacidadeChurrasqueiraModal = document.getElementById('capacidadeChurrasqueiraModal');
     
     let nomeAntigo = document.getElementById('nomeLocal' + idChurrasqueira).innerHTML;
     let capacidadeAntiga = document.getElementById('capacidadeLocal' + idChurrasqueira).innerHTML;
-
+    
+    formEditar.action = "/editarChurrasqueira/" + idChurrasqueira + "/" + idUsuario;
+    formEditar.method = 'post'
+    
     nomeChurrasqueiraModal.value = nomeAntigo.trim();
     capacidadeChurrasqueiraModal.value = parseInt(capacidadeAntiga, 10);
 }
