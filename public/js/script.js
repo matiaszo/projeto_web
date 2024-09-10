@@ -28,17 +28,15 @@ function mudarCapacidade(){
 function editarChurrasqueira(idChurrasqueira, idUsuario){
     let formEditar = document.getElementById('editarChurrasqueira');
     formEditar.action = "/editarChurrasqueira/" + idChurrasqueira + "/" + idUsuario;
-
+    
     let nomeChurrasqueiraModal = document.getElementById('nomeChurrasqueiraModal');
     let capacidadeChurrasqueiraModal = document.getElementById('capacidadeChurrasqueiraModal');
-
+    
     let nomeAntigo = document.getElementById('nomeLocal' + idChurrasqueira).innerHTML;
     let capacidadeAntiga = document.getElementById('capacidadeLocal' + idChurrasqueira).innerHTML;
 
-
-    nomeChurrasqueiraModal.value = nomeAntigo;
-    capacidadeChurrasqueiraModal.value = capacidadeAntiga;
-
+    nomeChurrasqueiraModal.value = nomeAntigo.trim();
+    capacidadeChurrasqueiraModal.value = parseInt(capacidadeAntiga, 10);
 }
 
 function cancelaReserva(idReservaLocal){
