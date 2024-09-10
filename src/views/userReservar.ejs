@@ -24,12 +24,16 @@
                 <div class="user">
                     <h5> Olá, <%=user[0].Nome%> </h5>     
                 </div>
+                <a class="tema" onclick="mudarTema()">
+                    <img src="/img/moon.png" id="moon" alt="" >
+                    <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+                </a>
             </div>
         </nav>
     </header>
     
     <main>
-        <form method="post" action="/userReservar/<%=user[0].IDUsuario%>">
+        <form id="form" method="post" action="/userReservar/<%=user[0].IDUsuario%>">
             <h4><span>Reserva</span><strong> Churrasqueira </strong> </h4>
             <div class="sessao">
                 <label for="edv">Edv:</label>
@@ -38,6 +42,7 @@
             <div class="sessao">
                 <label for="local">Local:</label>
                 <select class="form-select form-select-lg" aria-label="Default select example" name="local" id="localReserva" onchange="mudarCapacidade()" style="border: #76262679 solid 1px;" >
+                        <option> </option>
                     <% for (let i = 0; i < local.length; i++) { %>
                         <option value="<%=local[i].IDLocal%>/<%=local[i].Capacidade%>"> <%=local[i].Nome%> </option>
                     <% } %>
@@ -45,7 +50,7 @@
                 </div>
                 <div class="sessao">
                     <label for="capacidade">Capacidade:</label>
-                    <input type="number" class="form-control form-control-lg" name="quantidade" id="quantidade" aria-describedby="text" value="" disabled>
+                    <input type="number" class="form-control form-control-lg" name="quantidade" id="quantidade" aria-describedby="text" disabled>
                 </div>
                 <div class="sessao">
                     <label for="data">Data:</label>

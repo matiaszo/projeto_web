@@ -35,6 +35,10 @@
                 <div class="user d-flex gap-2">
                     <h5>Administrador: <%=user[0].Nome %>, </h5><h5> Edv: <%=user[0].EDV%> </h5>  
                 </div>
+                <a class="tema" onclick="mudarTema()">
+                    <img src="/img/moon.png" id="moon" alt="" >
+                    <img src="/img/sun.png" alt="" id="sun" style="display: none;" >
+               </a>
             </div>
         </nav>
     </header>
@@ -105,4 +109,5 @@
             </div>
           </footer>
     </main>
+    <script src="/js/script.js"></script>
 </body>
