@@ -4,6 +4,7 @@ const { use } = require('../../routes');
 const churrasqueiras = require('../model/tbLocal');
 const logChurrasqueiras = require('../model/tbLogLocal');
 const usuario = require('../model/tbUsuario');
+const { raw } = require('express');
 
 module.exports = {
     async postAdmEditarChurrasqueira(req, res){
@@ -11,11 +12,16 @@ module.exports = {
     let idUser = req.params.iduser;
     let idLocal = req.params.idlocal;
 
-    const user = await usuario.findAll({
+    const repetido = await churrasqueiras.findAll({
         raw: true,
-        attributes: ['EDV', 'Senha', 'Nome', 'IDUsuario'],
-        where: {IDUsuario: idUser}
+        attributes: ['IDLocal'],
+        where: {Nome: data.nomeChurrasqueira}
     })
+
+    if (repetido){
+        res.render('../views/admChurrasqueiras', {churrasqueira, user, erro: 'Voce não pode colocar o mesmo nome em duas churrasqueiras!'});
+        return;
+    }
 
     await churrasqueiras.update({
         Nome: data.nomeChurrasqueira,

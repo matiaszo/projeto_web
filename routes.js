@@ -43,6 +43,7 @@ route.post('/admReservas/:id', admReserva.postAdmReserva);
 route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.postAdmExcluirChurrasqueira);
 
 route.post('/editarChurrasqueira/:idlocal/:iduser', admEditarChurrasqueira.postAdmEditarChurrasqueira);
+
 route.post('/excluirChurrasqueira/:idlocal/:iduser', admExcluirChurrasqueira.postAdmExcluirChurrasqueira);
 
 route.post('/excluirReservaLocal/:idreserva', userCancelarReserva.postUserExcluirReserva );

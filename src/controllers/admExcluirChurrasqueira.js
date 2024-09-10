@@ -10,7 +10,7 @@ module.exports = {
         idLocal = req.params.idlocal
         idUser = req.params.iduser
 
-        localExcluido = await locais.findAll({
+        const localExcluido = await locais.findAll({
             raw: true,
             attributes: ['Nome', 'Capacidade'],
             where: {IDLocal: idLocal}
