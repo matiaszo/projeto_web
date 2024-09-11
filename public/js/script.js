@@ -1,4 +1,3 @@
-const { post } = require("../../routes");
 
 
 function pad(valor) { // completa com zeros à esquerda, caso necessário
@@ -41,7 +40,6 @@ function editarChurrasqueira(idChurrasqueira, idUsuario){
     nomeChurrasqueiraModal.value = nomeAntigo.trim();
     capacidadeChurrasqueiraModal.value = parseInt(capacidadeAntiga, 10);
 }
-
 function cancelaReserva(idReservaLocal, iduser){
     let form = document.getElementById('cancelaReserva');
     form.action = '/excluirReservaLocal/' + idReservaLocal + '/' + iduser
@@ -191,6 +189,19 @@ function ligthMode(){
     } catch{
         console.log('erro no modal excluir churras')
     }
+
+    try{
+        let filtroLocal = document.getElementById("filtro")
+        filtroLocal.style.backgroundColor = '';
+        filtroLocal.style.color = '';
+
+        let churrasqueira = document.getElementById("local");
+        churrasqueira.style.backgroundColor = '';
+        churrasqueira.style.color = '';
+    }
+    catch{
+        console.log('erro')
+    }
 }
 
 function darkMode(){
@@ -268,6 +279,18 @@ function darkMode(){
         console.log("erro na tabela")
     }
 
+    try{
+        let filtroLocal = document.getElementById("filtro")
+        filtroLocal.style.backgroundColor = 'rgb(30, 30, 30)';
+        filtroLocal.style.color = 'white';
+
+        let churrasqueira = document.getElementById("local");
+        churrasqueira.style.backgroundColor = 'rgb(30 , 30, 30)';
+        churrasqueira.style.color = 'white';
+    }
+    catch{
+        console.log('erro input select')
+    }
     try{
         let modalAddChurras = document.getElementById('modalAddChurras');
         if (modalAddChurras) {
