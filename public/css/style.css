@@ -138,3 +138,18 @@ a{
   width: 100%;
   height: 250px;
 }
+
+.filtroChurrasqueira{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tipo{
+  width: 60%;
+}
+.filtroChurrasqueira form{
+  width: 40%;
+}
