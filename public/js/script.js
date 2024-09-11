@@ -67,245 +67,274 @@ function excluirChurrasqueira(idChurrasqueira, idUsuario){
     formExcluir.action = "/excluirChurrasqueira/" + idChurrasqueira + "/" + idUsuario;
 }
 
-function mudarTema(){
+function ligthMode(){
     const body = document.body;
-    const forms = document.getElementById("form");
-    let inputEdv = document.getElementById('edv');
-    let inputLocal = document.getElementById('localReserva');
-    let inputCap = document.getElementById('quantidade');
-    let inputData = document.getElementById('dataReserva');
+    body.classList = ''   
 
-    const sun = document.getElementById('sun');
-    const moon = document.getElementById('moon');
+    let sun = document.getElementById('sun');
+    sun.style.display = 'none';  // Esconde o ícone do sol
 
-    if(sun.style.display == 'none'){
-        sun.style= 'display:show';
-        moon.style = 'display:none';
+    let moon = document.getElementById('moon');
+    moon.style.display = 'block';
 
-        body.classList = 'darkMode';
-
-        try{
-
-            forms.classList = 'darkMode';
-            forms.style.backgroundColor = 'rgb(30, 30, 30)';
+    try{
+        const forms = document.getElementById("form");
     
-            inputEdv.style.backgroundColor =  'rgb(30, 30, 30)';
-            inputEdv.style.color = 'white'
+        const inputs = ['edv', 'localReserva', 'quantidade', 'dataReserva'];
+        inputs.forEach(id => {
+            let input = document.getElementById(id);
+            input.style.backgroundColor = '';
+            input.style.color = '';
+        });
+
+        forms.classList = ''
+        forms.style.backgroundColor = '';
+
+    } catch{
+        console.log("erro formulario")
+    }
     
-            inputLocal.style.backgroundColor =  'rgb(30, 30, 30)';
-            inputLocal.style.color = 'white'
+    try{
+        for(let i = 1; i < 3; i++){
+            let card = document.getElementById(`card${i}`);
+            card.style.backgroundColor = '';
+        }
+
+    } catch {
+        console.log('erro')
+    }
     
-            inputCap.style.backgroundColor =  'rgb(30, 30, 30)';
-            inputCap.style.color = 'white'
-    
-            inputData.style.backgroundColor =  'rgb(30, 30, 30)';
-            inputData.style.color = 'white'
-        } catch{
-            console.log('erro no form')
-        }
-        
-        try{
-            for(let i = 1; i < 3; i++){
-                let card = document.getElementById(`card${i}`);
-                card.style.backgroundColor = 'rgb(30, 30, 30)';
-            }
-        }catch{
-            console.log('erro no primeiro')
-        }
-
-        try{
-            let i = 0;
-            while( i >= 0){
-                let cardReserva = document.getElementById(`cardReserva${i}`);
-                cardReserva.style.backgroundColor = 'rgb(30, 30, 30)';
-                cardReserva.style.color = 'white'
-
-                i++;
-            }
-
-        } catch{
-            console.log("erro no card reserva")
-        }
-        
-        try{
-            let modalCancelar = document.getElementById('modalCancelar');
-            modalCancelar.style.backgroundColor = 'rgb(30, 30, 30)';
-            modalCancelar.style.color = 'white'
-        } catch{
-            console.log('erro no modal')
-        }
-
-        try{
-            for(let i = 1; i < 4; i++){
-                let cardAdm = document.getElementById(`card${i}`);
-                cardAdm.style.backgroundColor = 'rgb(30, 30, 30)';
-            }
-        } catch{
-            console.log('erro adm')
-        }
-
-        try{
-            let tabelaReserva = document.getElementById("tabela");
-            tabelaReserva.classList = 'table table-dark';
-        }
-        catch{
-            console.log("erro na tabela")
-        }
-
-        try{
-            let modalAddChurras = document.getElementById('modalAddChurras');
-            modalAddChurras.style.color = 'white'
-            modalAddChurras.style.backgroundColor = 'rgb(30, 30, 30)';
-
-            let inputNome = document.getElementById('nomeChurrasqueira');
-            inputNome.style.backgroundColor = 'rgb(30, 30, 30)';
-            inputNome.style.color = 'white';
-
-            let inputCapacidade= document.getElementById('capacidadeChurrasqueira');
-            inputCapacidade.style.backgroundColor = 'rgb(30, 30, 30)';
-            inputCapacidade.style.color = 'white';
-        } catch{
-            console.log('erro no modal add churrras')
-        }
-
-        try{
-            let editaChurras = document.getElementById('editarChurrasqueira');
-            editaChurras.style.backgroundColor = 'rgb(30, 30, 30)';
-            editaChurras.style.color = 'white'
-
-            let inputNomeEdita = document.getElementById('nomeChurrasqueiraModal');
-            inputNomeEdita.style.backgroundColor = 'rgb(30, 30, 30)';
-            inputNomeEdita.style.color = 'white';
-
-            let inputCapacidadeEdita = document.getElementById('capacidadeChurrasqueiraModal');
-            inputCapacidadeEdita.style.backgroundColor = 'rgb(30, 30, 30)';
-            inputCapacidadeEdita.style.color = 'white';
-        }
-        catch{
-            console.log('erro modal editar')
-        }
-
-        try{
-            let excluiChurras = document.getElementById('modalExcluirChurras');
-            excluiChurras.style.backgroundColor = 'rgb(30, 30, 30)';
-        } catch{
-            console.log('erro no modal excluir churras')
-        }
-
-
-    } else{
-
-        sun.style = 'display:none';
-        moon.style = 'display:show';
-        body.classList = ''
-
-        try{
-            forms.classList = ''
-            forms.style.backgroundColor = '';
-    
-            inputEdv.style.backgroundColor =  '';
-            inputEdv.style.color = ''
-    
-            inputLocal.style.backgroundColor =  '';
-            inputLocal.style.color = ''
-    
-            inputCap.style.backgroundColor =  '';
-            inputCap.style.color = ''
-    
-            inputData.style.backgroundColor =  '';
-            inputData.style.color = ''
-        } catch{
-            console.log("erro formulario")
-        }
-     
-        try{
-            for(let i = 1; i < 3; i++){
-                let card = document.getElementById(`card${i}`);
-                card.style.backgroundColor = '';
-            }
-
-        } catch {
-            console.log('erro')
-        }
-       
-        try{
-            let i = 0;
-            while( i >= 0){
-                let cardReserva = document.getElementById(`cardReserva${i}`);
-                cardReserva.style.backgroundColor = '';
-                cardReserva.style.color = ''
-
-                i++;
-            }
-        }
-        catch{
-            console.log('erro')
-        }
-
-        try{
-            let modalCancelar = document.getElementById('modalCancelar');
-            modalCancelar.style.backgroundColor = '';
-            modalCancelar.style.color = '';
-        } catch{
-            console.log('erro no modal')
-        }
-
-        try{
-            for(let i = 1; i < 4; i++){
-                let cardAdm = document.getElementById(`card${i}`);
-                cardAdm.style.backgroundColor = '';
-            }
-        } catch{
-            console.log("erro card adm")
-        }
-
-        try{
-            let tabelaReserva = document.getElementById("tabela");
-            tabelaReserva.classList = 'table ';
-        }
-        catch{
-            console.log("erro na tabela")
-        }
-
-        try{
-            let modalAddChurras = document.getElementById('modalAddChurras');
-            modalAddChurras.style.backgroundColor = '' ;
-            modalAddChurras.style.color = '' ;
-
-            let inputNome = document.getElementById('nomeChurrasqueira');
-            inputNome.style.backgroundColor = '';
-            inputNome.style.color = '';
-
-            let inputCapacidade= document.getElementById('capacidadeChurrasqueira');
-            inputCapacidade.style.backgroundColor = '';
-            inputCapacidade.style.color = '';
-
-        } catch{
-            console.log('erro no modal')
-        }
-
-        try{
-            let editaChurras = document.getElementById('editarChurrasqueira');
-            editaChurras.style.backgroundColor = '';
-            editaChurras.style.color = ''
-
-            let inputNomeEdita = document.getElementById('nomeChurrasqueiraModal');
-            inputNomeEdita.style.backgroundColor = '';
-
-            let inputCapacidadeEdita = document.getElementById('capacidadeChurrasqueiraModal');
-            inputCapacidadeEdita.style.backgroundColor = '';
-            inputNomeEdita.style.color = '';
-            inputCapacidadeEdita.style.color = '';
-        }
-        catch{
-            console.log('erro modal editar')
-        }
-
-        try{
-            let excluiChurras = document.getElementById('modalExcluirChurras');
-            excluiChurras.style.backgroundColor = '';
-        } catch{
-            console.log('erro no modal excluir churras')
+    try{
+        let i = 0;
+        while (true) {
+            let cardReserva = document.getElementById(`cardReserva${i}`);
+            if (!cardReserva) break;
+            cardReserva.style.backgroundColor = '';
+            cardReserva.style.color = '';
+            i++;
         }
     }
+    catch{
+        console.log('erro')
+    }
+
+    try{
+        let modalCancelar = document.getElementById('modalCancelar');
+        if (modalCancelar) {
+            modalCancelar.style.backgroundColor = '';
+            modalCancelar.style.color = '';
+        }
+    } catch{
+        console.log('erro no modal')
+    }
+
+    try{
+        for(let i = 1; i < 4; i++){
+            let cardAdm = document.getElementById(`card${i}`);
+            cardAdm.style.backgroundColor = '';
+        }
+    } catch{
+        console.log("erro card adm")
+    }
+
+    try{
+        let tabelaReserva = document.getElementById("tabela");
+        if (tabelaReserva) tabelaReserva.classList.remove('table-dark');
+    }
+    catch{
+        console.log("erro na tabela")
+    }
+
+    try{
+        let modalAddChurras = document.getElementById('modalAddChurras');
+        if (modalAddChurras) {
+            modalAddChurras.style.backgroundColor = '';
+            modalAddChurras.style.color = '';
+        }
+
+        const inputsModal = ['nomeChurrasqueira', 'capacidadeChurrasqueira'];
+        inputsModal.forEach(id => {
+            let input = document.getElementById(id);
+            if (input) {
+                input.style.backgroundColor = '';
+                input.style.color = '';
+            }
+        });
+
+    } catch{
+        console.log('erro no modal')
+    }
+
+    try{
+        let editaChurras = document.getElementById('editarChurrasqueira');
+        if (editaChurras) {
+            editaChurras.style.backgroundColor = '';
+            editaChurras.style.color = '';
+
+            const inputsEdita = ['nomeChurrasqueiraModal', 'capacidadeChurrasqueiraModal'];
+            inputsEdita.forEach(id => {
+                let input = document.getElementById(id);
+                if (input) {
+                    input.style.backgroundColor = '';
+                    input.style.color = '';
+                }
+            });
+        }
+    }
+    catch{
+        console.log('erro modal editar')
+    }
+
+    try{
+        let excluiChurras = document.getElementById('modalExcluirChurras');
+        excluiChurras.style.backgroundColor = '';
+    } catch{
+        console.log('erro no modal excluir churras')
+    }
 }
+
+function darkMode(){
+    const body = document.body;
+    const forms = document.getElementById("form");
+    body.classList = 'darkMode';
+
+
+    let sun = document.getElementById('sun');
+    sun.style.display = 'block';  
+
+    let moon = document.getElementById('moon');
+    moon.style.display = 'none';
+    try{
+
+        forms.classList = 'darkMode';
+        forms.style.backgroundColor = 'rgb(30, 30, 30)';
+
+        const inputs = ['edv', 'localReserva', 'quantidade', 'dataReserva'];
+        inputs.forEach(id => {
+            let input = document.getElementById(id);
+            if (input) {
+                input.style.backgroundColor = 'rgb(30, 30, 30)';
+                input.style.color = 'white';
+            }
+        });
+    } catch{
+        console.log('erro no form')
+    }
+    
+    try{
+        for(let i = 1; i < 3; i++){
+            let card = document.getElementById(`card${i}`);
+            card.style.backgroundColor = 'rgb(30, 30, 30)';
+        }
+    }catch{
+        console.log('erro no primeiro')
+    }
+
+    try{
+        let i = 0;
+        while (true) {
+            let cardReserva = document.getElementById(`cardReserva${i}`);
+            if (!cardReserva) break;
+            cardReserva.style.backgroundColor = 'rgb(30, 30, 30)';
+            cardReserva.style.color = 'white';
+            i++;
+        }
+    } catch{
+        console.log("erro no card reserva")
+    }
+    
+    try{
+        let modalCancelar = document.getElementById('modalCancelar');
+        modalCancelar.style.backgroundColor = 'rgb(30, 30, 30)';
+        modalCancelar.style.color = 'white'
+    } catch{
+        console.log('erro no modal')
+    }
+
+    try{
+        for(let i = 1; i < 4; i++){
+            let cardAdm = document.getElementById(`card${i}`);
+            cardAdm.style.backgroundColor = 'rgb(30, 30, 30)';
+        }
+    } catch{
+        console.log('erro adm')
+    }
+
+    try{
+        let tabelaReserva = document.getElementById("tabela");
+        tabelaReserva.classList = 'table table-dark';
+    }
+    catch{
+        console.log("erro na tabela")
+    }
+
+    try{
+        let modalAddChurras = document.getElementById('modalAddChurras');
+        if (modalAddChurras) {
+            modalAddChurras.style.color = 'white';
+            modalAddChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+
+            const inputsModal = ['nomeChurrasqueira', 'capacidadeChurrasqueira'];
+            inputsModal.forEach(id => {
+                let input = document.getElementById(id);
+                if (input) {
+                    input.style.backgroundColor = 'rgb(30, 30, 30)';
+                    input.style.color = 'white';
+                }
+            });
+        }
+    } catch{
+        console.log('erro no modal add churrras')
+    }
+
+    try{
+        let editaChurras = document.getElementById('editarChurrasqueira');
+        if (editaChurras) {
+            editaChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+            editaChurras.style.color = 'white';
+
+            const inputsEdita = ['nomeChurrasqueiraModal', 'capacidadeChurrasqueiraModal'];
+            inputsEdita.forEach(id => {
+                let input = document.getElementById(id);
+                if (input) {
+                    input.style.backgroundColor = 'rgb(30, 30, 30)';
+                    input.style.color = 'white';
+                }
+            });
+        }
+    }
+    catch{
+        console.log('erro modal editar')
+    }
+
+    try{
+        let excluiChurras = document.getElementById('modalExcluirChurras');
+        if (excluiChurras) excluiChurras.style.backgroundColor = 'rgb(30, 30, 30)';
+    } catch{
+        console.log('erro no modal excluir churras')
+    }
+
+
+}
+
+function getTema(){
+    var tema = localStorage.getItem('tema')
+    if(tema === 'dark'){
+        darkMode()
+    } else{
+        ligthMode()
+    }
+}
+
+function mudarTema(){
+    const sun = document.getElementById('sun');
+    
+    if(sun.style.display === 'none'){ 
+        localStorage.setItem('tema', 'dark')
+    } else{
+        localStorage.setItem('tema', 'ligth')
+    }
+    getTema()
+}
+
+getTema()
