@@ -22,7 +22,7 @@
         <form method="post" action="/usercadastro">
             <h1><span>Clube</span><strong> Bosch </strong> </h1>
             <div class="sessao">
-                <input type="number" class="form-control form-control-lg" value="<%=(data) ? data.edv : ''%>" placeholder="Edv" name="edv" id="edv" aria-describedby="edv" required>
+                <input type="number" class="form-control form-control-lg" value="<%=(data) ? data.edv : ''%>" min="9290"  placeholder="Edv" name="edv" id="edv" aria-describedby="edv" required>
             </div>
             <div class="sessao">
                 <input type="text" class="form-control form-control-lg" value="<%=(data) ? data.nome : ''%>" placeholder="Nome" name="nome" id="nome" aria-describedby="nome" required>
