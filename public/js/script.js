@@ -164,7 +164,7 @@ function ligthMode(){
     }
 
     try{
-        let editaChurras = document.getElementById('editarChurrasqueira');
+        let editaChurras = document.getElementById('editarChurrasqueiraStyle');
         if (editaChurras) {
             editaChurras.style.backgroundColor = '';
             editaChurras.style.color = '';
@@ -311,7 +311,7 @@ function darkMode(){
     }
 
     try{
-        let editaChurras = document.getElementById('editarChurrasqueira');
+        let editaChurras = document.getElementById('editarChurrasqueiraStyle');
         if (editaChurras) {
             editaChurras.style.backgroundColor = 'rgb(30, 30, 30)';
             editaChurras.style.color = 'white';
