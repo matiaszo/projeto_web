@@ -110,11 +110,11 @@
             <form action="/admChurrasqueiras/<%=user[0].IDUsuario%>" method="post">
               <div class="mb-3">
                 <label for="exampleInputText" class="form-label poppins-regular-form">Nome:</label>
-                <input type="text" class="form-control" id="nomeChurrasqueira" name="nomeChurrasqueira">
+                <input type="text" class="form-control" id="nomeChurrasqueira" name="nomeChurrasqueira" required>
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label poppins-regular-form">Capacidade:</label>
-                <input type="number" class="form-control" id="capacidadeChurrasqueira" name="capacidadeChurrasqueira">
+                <input type="number" class="form-control" id="capacidadeChurrasqueira" name="capacidadeChurrasqueira" required>
               </div>
               <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-cadastro btn-success w-75 poppins-regular-form">Cadastrar</button>

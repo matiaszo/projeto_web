@@ -21,7 +21,7 @@ module.exports = {
         });
 
         if (user[0]){
-            res.render('../views/logIn', {erro: "Usuario já cadastrado."});
+            res.render('../views/logIn', {erro: "EDV já cadastrado!"});
             return;
         }
 
